@@ -7,13 +7,8 @@ export const ContainerOuter = forwardRef<
   React.ComponentPropsWithoutRef<"div"> // Props excluding the ref
 >(function OuterContainer({ className, children, ...props }, ref) {
   return (
-    <div
-      ref={ref}
-      className={clsx("sm:px-8 border-2 border-blue-500", className)}
-      {...props}>
-      <div className="mx-auto w-full max-w-7xl lg:px-8 border-2 border-red-500">
-        {children}
-      </div>
+    <div ref={ref} className={clsx("sm:px-8", className)} {...props}>
+      <div className="mx-auto w-full max-w-7xl lg:px-8">{children}</div>
     </div>
   );
 });
@@ -26,14 +21,9 @@ export const ContainerInner = forwardRef<
   return (
     <div
       ref={ref}
-      className={clsx(
-        "relative px-4 sm:px-8 lg:px-12 border-2 border-yellow-500",
-        className
-      )}
+      className={clsx("relative px-4 sm:px-8 lg:px-12", className)}
       {...props}>
-      <div className="mx-auto max-w-2xl lg:max-w-5xl  border-2 border-green-500">
-        {children}
-      </div>
+      <div className="mx-auto max-w-2xl lg:max-w-5xl">{children}</div>
     </div>
   );
 });

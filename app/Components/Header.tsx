@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
-import React from "react";
 import { Container } from "./Container";
+import Coffeeing from "./Coffeeing";
 
 const MoonIcon = (props: React.ComponentPropsWithoutRef<"svg">) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -31,9 +32,14 @@ const SunIcon = (props: React.ComponentPropsWithoutRef<"svg">) => {
   );
 };
 
+const handleToggleTheme = () => {
+  document.querySelector("html")?.classList.toggle("dark");
+};
+
 const ThemeToggle = () => {
   return (
     <button
+      onClick={handleToggleTheme}
       type="button"
       className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
       <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
@@ -44,53 +50,67 @@ const ThemeToggle = () => {
 
 const Header = () => {
   return (
-    <Container>
-      <div className="relative flex gap-4">
-        <div className="flex justify-center flex-1">image position</div>
-        <nav className="flex flex-1 justify-center items-center">
-          <ul className="flex justify-center space-x-3 text-sm ring-1 ring-white/10 rounded-full bg-zinc-800/90 font-medium text-zinc-200 shadow-lg shadow-zinc-800/5 px-3 backdrop-blur py-3">
-            <li>
-              <Link
-                className="hover:text-teal-400 px-3 py-2 transition"
-                href={"/about"}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-teal-400 px-3 py-2 transition"
-                href={"/articles"}>
-                Articles
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-teal-400 px-3 py-2 transition"
-                href={"/projects"}>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-teal-400 px-3 py-2 transition"
-                href={"/speaking"}>
-                Speaking
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-teal-400 px-3 py-2 transition"
-                href={"/uses"}>
-                Uses
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div className="flex-1 flex justify-center items-center">
-          <ThemeToggle />
+    <>
+      <header className="relative h-44">
+        <div className="top-0 h-16 pt-6 sticky">
+          <Container className="">
+            <div className="relative flex gap-4">
+              <div className="flex justify-start items-center flex-1">
+                <Link
+                  href={"/"}
+                  className=" h-10 w-10 ring-1 ring-gray-300  rounded-full flex justify-center items-center">
+                  <div className=" h-9 w-9 dark:bg-gray-50 rounded-full ring-2 ring-white dark:ring-zinc-300/20">
+                    <Coffeeing />
+                  </div>
+                </Link>
+              </div>
+              <nav className="flex flex-1 justify-center items-center ">
+                <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 py-2">
+                  <li>
+                    <Link
+                      className="hover:text-teal-400 px-3 py-2 transition"
+                      href={"/about"}>
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="hover:text-teal-400 px-3 py-2 transition"
+                      href={"/articles"}>
+                      Articles
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="hover:text-teal-400 px-3 py-2 transition"
+                      href={"/projects"}>
+                      Projects
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="hover:text-teal-400 px-3 py-2 transition"
+                      href={"/speaking"}>
+                      Speaking
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="hover:text-teal-400 px-3 py-2 transition"
+                      href={"/uses"}>
+                      Uses
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+              <div className="flex-1 flex justify-end items-center">
+                <ThemeToggle />
+              </div>
+            </div>
+          </Container>
         </div>
-      </div>
-    </Container>
+      </header>
+    </>
   );
 };
 
