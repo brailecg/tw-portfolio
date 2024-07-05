@@ -2,6 +2,15 @@
 import Link from "next/link";
 import { Container } from "./Container";
 import Coffeeing from "./Coffeeing";
+import { usePathname } from "next/navigation";
+import {
+  Popover,
+  PopoverBackdrop,
+  PopoverButton,
+  PopoverPanel,
+} from "@headlessui/react";
+import clsx from "clsx";
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 const MoonIcon = (props: React.ComponentPropsWithoutRef<"svg">) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -48,13 +57,107 @@ const ThemeToggle = () => {
   );
 };
 
+const NavItem = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => {
+  let isActive = usePathname() === href;
+
+  return (
+    <li>
+      <Link
+        href={href}
+        className={clsx(
+          "relative block px-3 py-2 transition",
+          isActive
+            ? "text-teal-500 dark:text-teal-400"
+            : "hover:text-teal-500 dark:hover:text-teal-400"
+        )}>
+        {children}
+        {isActive && (
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+        )}
+      </Link>
+    </li>
+  );
+};
+
+const DesktopNav = () => {
+  return (
+    <nav className="hidden sm:flex flex-1 justify-center items-center ">
+      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 py-2">
+        <NavItem href="/about">About</NavItem>
+        <NavItem href="/articles">Articles</NavItem>
+        <NavItem href="/projects">Projects</NavItem>
+        <NavItem href="/speaking">Speaking</NavItem>
+        <NavItem href="/uses">Uses</NavItem>
+      </ul>
+    </nav>
+  );
+};
+
+function MobileNavItem({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  let isActive = usePathname() === href;
+  return (
+    <li>
+      <PopoverButton
+        as={Link}
+        href={href}
+        className={clsx(
+          "relative block py-2 transition",
+          isActive
+            ? "text-teal-500 dark:text-teal-400"
+            : " dark:hover:text-teal-400"
+        )}>
+        {children}
+      </PopoverButton>
+    </li>
+  );
+}
+
+const MobileNav = () => {
+  return (
+    <Popover className="sm:hidden">
+      <PopoverButton className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+        Menu
+        <ChevronDownIcon className="ml-3 h-auto w-4 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
+      </PopoverButton>
+      <PopoverBackdrop
+        transition
+        className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm duration-150 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in dark:bg-black/80"
+      />
+      <PopoverPanel
+        focus
+        transition
+        className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 duration-150 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in dark:bg-zinc-900 dark:ring-zinc-800">
+        <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+          <MobileNavItem href="/about">About</MobileNavItem>
+          <MobileNavItem href="/articles">Articles</MobileNavItem>
+          <MobileNavItem href="/projects">Projects</MobileNavItem>
+          <MobileNavItem href="/speaking">Speaking</MobileNavItem>
+          <MobileNavItem href="/uses">Uses</MobileNavItem>
+        </ul>
+      </PopoverPanel>
+    </Popover>
+  );
+};
+
 const Header = () => {
   return (
     <>
-      <header className="relative h-44">
+      <header className=" min-h-44 z-50">
         <div className="top-0 h-16 pt-6 sticky">
           <Container className="">
-            <div className="relative flex gap-4">
+            <div className="flex gap-4">
               <div className="flex justify-start items-center flex-1">
                 <Link
                   href={"/"}
@@ -64,46 +167,11 @@ const Header = () => {
                   </div>
                 </Link>
               </div>
-              <nav className="flex flex-1 justify-center items-center ">
-                <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 py-2">
-                  <li>
-                    <Link
-                      className="hover:text-teal-400 px-3 py-2 transition"
-                      href={"/about"}>
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="hover:text-teal-400 px-3 py-2 transition"
-                      href={"/articles"}>
-                      Articles
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="hover:text-teal-400 px-3 py-2 transition"
-                      href={"/projects"}>
-                      Projects
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="hover:text-teal-400 px-3 py-2 transition"
-                      href={"/speaking"}>
-                      Speaking
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="hover:text-teal-400 px-3 py-2 transition"
-                      href={"/uses"}>
-                      Uses
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-              <div className="flex-1 flex justify-end items-center">
+              <div className="flex-1 flex justify-end sm:justify-center">
+                <MobileNav />
+                <DesktopNav />
+              </div>
+              <div className="sm:flex-1 flex justify-end items-center">
                 <ThemeToggle />
               </div>
             </div>
