@@ -1,33 +1,46 @@
 import Link from "next/link";
 import { Container } from "./Components/Container";
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 import clsx from "clsx";
+
+import nextIcon from "../public/next-icon.svg";
+import reactIcon from "../public/react-icon.svg";
+import jsIcon from "../public/js-icon.svg";
+import phpIcon from "../public/php-icon.svg";
+import supabaseIcon from "../public/supabase-icon.svg";
+import tailwindIcon from "../public/tailwind-icon.svg";
 import {
   InstagramIcon,
   XIcon,
   GitHubIcon,
   LinkedInIcon,
 } from "./Components/SocialIcons";
-
 import { StackIcon } from "./Components/TechIcons";
 
 import nextReactJs from "../public/next-react.png";
 import reactJs from "../public/reactjs.png";
 import twImage from "../public/tw.png";
 import supabaseImage from "../public/supabase.png";
+import { ArrowDownIcon } from "@heroicons/react/16/solid";
 
-function SocialLink({
+type Stack = {
+  name: string;
+  logo: ImageProps["src"];
+  yearsOfExperience: string;
+};
+
+const SocialLink = ({
   icon: Icon,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Link> & {
   icon: React.ComponentType<{ className?: string }>;
-}) {
+}) => {
   return (
     <Link className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   );
-}
+};
 
 const RightChevron = () => {
   return (
@@ -150,44 +163,149 @@ const TechIcon = ({
   );
 };
 
-const TechStack = () => {
-  const techStackList = [
-    "NextJs",
-    "ReactJs",
-    "Tailwdind",
-    "Supabase",
-    "MySql",
-    "PHP",
-    "Vanilla Javascript",
-  ];
+const TechItem = ({ stack }: { stack: Stack }) => {
   return (
-    <>
-      <h3 className="flex items-center gap-2 mb-4">
-        <TechIcon icon={StackIcon} />
-        <span className="dark:text-white font-semibold"> Tech Stack</span>
-      </h3>
-      <ul className="flex flex-col gap-2">
+    <li className="flex items-center gap-4">
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+        <Image
+          src={stack.logo}
+          alt=""
+          className="h-7 w-7 rounded-full"
+          unoptimized
+        />
+      </div>
+      <dl className="flex items-center justify-between flex-auto gap-x-2">
+        <div>
+          <dt className="sr-only">Company</dt>
+          <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+            {stack.name}
+          </dd>
+        </div>
+        <div>
+          <dt className="sr-only">Years of Experience</dt>
+          <dd className="ml-auto text-sm text-zinc-400 dark:text-zinc-500">
+            {stack.yearsOfExperience}
+          </dd>
+        </div>
+      </dl>
+    </li>
+  );
+};
+
+const TechStack = () => {
+  const techStackList: Array<Stack> = [
+    {
+      name: "NextJs",
+      logo: nextIcon,
+      yearsOfExperience: "1 year",
+    },
+    {
+      name: "ReactJs",
+      logo: reactIcon,
+      yearsOfExperience: "1 year",
+    },
+    {
+      name: "Javascript",
+      logo: jsIcon,
+      yearsOfExperience: "4 years",
+    },
+    {
+      name: "PHP",
+      logo: phpIcon,
+      yearsOfExperience: "3 years",
+    },
+    {
+      name: "Supabase",
+      logo: supabaseIcon,
+      yearsOfExperience: "3 months",
+    },
+    {
+      name: "Tailwind",
+      logo: tailwindIcon,
+      yearsOfExperience: "1 year",
+    },
+  ];
+
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <div className="flex justify-between mb-4">
+        <h2 className="flex items-center md:gap-2 mb-4">
+          <TechIcon icon={StackIcon} />
+          <span className="dark:text-white text-sm xs:text-base font-semibold">
+            {" "}
+            Tech Stack
+          </span>
+        </h2>
+        <div className="flex flex-col text-end text-xs max-w-44 sm:max-w-48 dark:text-white ">
+          <span className="font-semibold">Years of Experience</span>
+          <span className=" text-[11px] italic">
+            (professional and non-professional)
+          </span>
+        </div>
+      </div>
+      <ul className="flex flex-col gap-2 px-2">
         {techStackList.map((tech, index) => {
-          return (
-            <li className="flex items-center gap-3">
-              <div className="relative rounded-full">
-                <div className=" rounded-full w-6 h-6 absolute bg-transparent border"></div>
-                <Image
-                  src={
-                    "https://enhjxvyhuuhtaizjffuz.supabase.co/storage/v1/object/public/icons/supabase-logo-icon.png?t=2024-07-04T08%3A57%3A56.769Z"
-                  }
-                  alt="vercel icon"
-                  width={20}
-                  height={20}
-                  className="rounded-full z-50"
-                />
-              </div>
-              <p className="dark:text-white font-semibold">{tech}</p>
-            </li>
-          );
+          return <TechItem key={index} stack={tech} />;
         })}
       </ul>
-    </>
+    </div>
+  );
+};
+
+function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}>
+      <path
+        d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      />
+      <path
+        d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  );
+}
+const ContactComponent = () => {
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <form action="/thank-you">
+        <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+          <MailIcon className="h-6 w-6 flex-none" />
+          <span className="ml-3">Email Resume</span>
+        </h2>
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          You can download the resume or have it sent to you. Just enter your
+          email and tap that send button
+        </p>
+        <div className="mt-6 flex">
+          <input
+            type="email"
+            placeholder="Email address"
+            aria-label="Email address"
+            required
+            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 "
+          />
+          <button
+            type="submit"
+            className="ml-4 flex-none bg-zinc-800 font-semibold text-zinc-100 hover:bg-zinc-700 active:bg-zinc-800 active:text-zinc-100/70 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-700 dark:active:text-zinc-100/70 inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none ">
+            Send
+          </button>
+        </div>
+      </form>
+
+      <button className="group mt-6 w-full inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70">
+        Download CV
+        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+      </button>
+    </div>
   );
 };
 
@@ -217,12 +335,12 @@ export default function Home() {
         <TechImages />
       </div>
       <Container className="mt-16">
-        <div className=" flex flex-col sm:flex-row sm:gap-16">
-          <div className=" sm:w-1/2">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+          <div className="flex flex-col gap-16">
             <Experience />
           </div>
-          <div className=" sm:w-1/2">
-            <div>Contact</div>
+          <div className="space-y-10 lg:pl-16 xl:pl-24">
+            <ContactComponent />
             <TechStack />
           </div>
         </div>
