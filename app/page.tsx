@@ -42,7 +42,7 @@ const SocialLink = ({
   );
 };
 
-const RightChevron = () => {
+export const RightChevron = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,9 @@ const Experience = () => {
               </span>
             </p>
             <p className="dark:text-white font-semibold">{exp.company_name}</p>
-            <p className=" text-[#A1A1AA] text-sm">{exp.summary}</p>
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+              {exp.summary}
+            </p>
           </Link>
           <Link
             href={"#"}
@@ -314,7 +316,7 @@ export default function Home() {
     <>
       <Container className="mt-9">
         <div className=" max-w-2xl">
-          <h1 className=" text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
             Frontend Developer, webdev content creator
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
