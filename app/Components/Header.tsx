@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Container } from "./Container";
-import Coffeeing from "./Coffeeing";
+import Image, { type ImageProps } from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Popover,
@@ -11,6 +11,7 @@ import {
 } from "@headlessui/react";
 import clsx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import navImage from "../../public/nav-image.jpeg";
 
 const MoonIcon = (props: React.ComponentPropsWithoutRef<"svg">) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -163,7 +164,15 @@ const Header = () => {
                   href={"/"}
                   className=" h-10 w-10 ring-1 ring-gray-300  rounded-full flex justify-center items-center">
                   <div className=" h-9 w-9 dark:bg-gray-50 rounded-full ring-2 ring-white dark:ring-zinc-300/20">
-                    <Coffeeing />
+                    <Image
+                      src={navImage}
+                      alt=""
+                      sizes={"2.25rem"}
+                      className={
+                        "rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9"
+                      }
+                      priority
+                    />
                   </div>
                 </Link>
               </div>
