@@ -66,7 +66,7 @@ const Blogs = () => {
     <Container>
       <div className=" max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
-          Writing about anything Web Development
+          Writing about anything Web Development and then some.
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
           Written form of any new things i've discovered and topics or concepts

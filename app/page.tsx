@@ -85,7 +85,7 @@ const experienceSummaryData = [
     company_name: "Accenture PH",
     position: "Appliciation Development Team Lead",
     summary:
-      "I was part of the Salesforce team. I was assigned to two projects. First was as a javascript developer. Second was as a team lead for team focused in Integration using Apex (Salesforce's proprietary programming language)",
+      "I was part of the Salesforce team. I was assigned to two projects. First was as a javascript developer. Second was as a lead for a team focused in integration using Apex (Salesforce's proprietary programming language)",
     tech_stack: ["React", "NextJs"],
   },
 ];
@@ -317,7 +317,7 @@ export default function Home() {
       <Container className="mt-9">
         <div className=" max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
-            Frontend Developer, webdev content creator
+            Frontend Developer, aperiodic runner, loafer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I'm Braile, a frontend developer from Benguet. I recently made the
