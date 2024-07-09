@@ -90,7 +90,7 @@ const About = () => {
             </p>
             <p>
               The rest, you can check my work experiences{" "}
-              <Link className=" text-purple-500" href={"#"}>
+              <Link className=" text-purple-500" href={"/experience"}>
                 here
               </Link>
               .
