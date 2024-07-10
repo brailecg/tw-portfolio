@@ -155,7 +155,7 @@ const MobileNav = () => {
 const Header = () => {
   return (
     <>
-      <header className=" min-h-44 z-50">
+      <header className=" min-h-36 sm:min-h-44 z-50">
         <div className="top-0 h-16 pt-6 sticky">
           <Container className="">
             <div className="flex gap-4">

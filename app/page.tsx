@@ -17,11 +17,12 @@ import {
 } from "./Components/SocialIcons";
 import { StackIcon } from "./Components/TechIcons";
 
-import nextReactJs from "../public/next-react.png";
-import reactJs from "../public/reactjs.png";
-import twImage from "../public/tw.png";
-import supabaseImage from "../public/supabase.png";
+import dictionaryImage from "../public/dictionary-image.png";
+import kanbanImage from "../public/kanban-image.png";
+import devlinkImage from "../public/devlink-image.png";
+
 import { ArrowDownIcon } from "@heroicons/react/16/solid";
+import ProjectSlider from "./Components/Slider";
 
 type Stack = {
   name: string;
@@ -121,35 +122,29 @@ const Experience = () => {
 };
 
 const TechImages = () => {
-  let rotations = [
-    "rotate-2",
-    "-rotate-2",
-    "rotate-2",
-    "rotate-2",
-    "-rotate-2",
-  ];
+  let rotations = ["rotate-2", "-rotate-2", "rotate-2"];
 
   return (
-    <div className="mt-16 sm:mt-20 overflow-hidden gap-5 ">
-      <ul className="-my-4 flex justify-center gap-5  py-4 sm:gap-8">
-        {[nextReactJs, reactJs, twImage, supabaseImage].map(
+    <div className="mt-16 sm:mt-20">
+      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+        {[dictionaryImage, kanbanImage, devlinkImage].map(
           (image, imageIndex) => (
-            <li
-              key={imageIndex}
+            <div
+              key={image.src}
               className={clsx(
-                "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800",
+                "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
                 rotations[imageIndex % rotations.length]
               )}>
               <Image
                 src={image}
                 alt=""
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover opacity-50"
               />
-            </li>
+            </div>
           )
         )}
-      </ul>
+      </div>
     </div>
   );
 };
@@ -314,7 +309,7 @@ const ContactComponent = () => {
 export default function Home() {
   return (
     <>
-      <Container className="mt-9">
+      <Container className="">
         <div className=" max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
             Frontend Developer, aperiodic runner, loafer.
@@ -334,7 +329,8 @@ export default function Home() {
         </div>
       </Container>
       <div className=" text-white">
-        <TechImages />
+        {/* <TechImages /> */}
+        <ProjectSlider />
       </div>
       <Container className="mt-16">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
