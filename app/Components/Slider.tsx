@@ -8,6 +8,7 @@ import clsx from "clsx";
 import dictionaryImage from "../../public/dictionary-image.png";
 import kanbanImage from "../../public/kanban-image.png";
 import devlinkImage from "../../public/devlink-image.png";
+import Link from "next/link";
 
 const images = [
   { src: "/dictionary-image.png", alt: "Dictionary Image" },
@@ -54,58 +55,62 @@ const ProjectSlider = () => {
   };
   const rotations = ["rotate-2", "-rotate-2", "rotate-2"];
   return (
-    <Carousel
-      additionalTransfrom={0}
-      arrows
-      customTransition="all 500ms"
-      transitionDuration={500}
-      className=" max-w-[1280px] m-auto"
-      containerClass="container mt-16 py-2 overflow-hidden"
-      dotListClass=""
-      draggable
-      infinite
-      itemClass=" !w-52 sm:!w-96 !z-20"
-      minimumTouchDrag={80}
-      pauseOnHover
-      responsive={responsive}
-      shouldResetAutoplay
-      slidesToSlide={1}
-      swipeable>
-      {images.map((image, index) => (
-        <div
-          key={index}
-          draggable={false}
-          className={clsx(
-            "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
-            rotations[index % rotations.length]
-          )}>
-          <img
-            draggable={false}
-            src={image.src}
-            alt={image.alt}
-            sizes="(min-width: 640px) 18rem, 11rem"
-            className="absolute h-full w-full object-cover"
-          />
-        </div>
-      ))}
-      {images.map((image, index) => (
-        <div
-          key={index}
-          draggable={false}
-          className={clsx(
-            "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
-            rotations[index % rotations.length]
-          )}>
-          <img
-            draggable={false}
-            src={image.src}
-            alt={image.alt}
-            sizes="(min-width: 640px) 18rem, 11rem"
-            className="absolute h-full w-full object-cover"
-          />
-        </div>
-      ))}
-    </Carousel>
+    <>
+      <Carousel
+        additionalTransfrom={0}
+        arrows
+        customTransition="all 500ms"
+        transitionDuration={500}
+        className=" max-w-[1280px] m-auto"
+        containerClass="container mt-2 sm:mt-6 py-2 overflow-hidden"
+        dotListClass=""
+        infinite
+        itemClass=" !w-52 sm:!w-96 !z-20"
+        minimumTouchDrag={80}
+        pauseOnHover
+        responsive={responsive}
+        shouldResetAutoplay
+        slidesToSlide={1}>
+        {images.map((image, index) => (
+          <Link href={"/projects"}>
+            <div
+              key={index}
+              draggable={false}
+              className={clsx(
+                "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800  ring-zinc-900/5  ring-2 ring-offset-2",
+                rotations[index % rotations.length]
+              )}>
+              <img
+                draggable={false}
+                src={image.src}
+                alt={image.alt}
+                sizes="(min-width: 640px) 18rem, 11rem"
+                className="absolute h-full w-full object-cover"
+              />
+            </div>
+          </Link>
+        ))}
+        {images.map((image, index) => (
+          <Link href={"/projects"}>
+            <div
+              key={index}
+              draggable={false}
+              className={clsx(
+                "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800  ring-zinc-900/5  ring-2 ring-offset-2",
+                rotations[index % rotations.length]
+              )}>
+              <img
+                draggable={false}
+                src={image.src}
+                alt={image.alt}
+                sizes="(min-width: 640px) 18rem, 11rem"
+                className="absolute h-full w-full object-cover"
+              />
+            </div>
+          </Link>
+        ))}
+      </Carousel>
+    </>
   );
 };
 

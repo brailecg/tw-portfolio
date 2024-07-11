@@ -15,7 +15,6 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from "./Components/SocialIcons";
-import { StackIcon } from "./Components/TechIcons";
 
 import dictionaryImage from "../public/dictionary-image.png";
 import kanbanImage from "../public/kanban-image.png";
@@ -23,6 +22,12 @@ import devlinkImage from "../public/devlink-image.png";
 
 import { ArrowDownIcon } from "@heroicons/react/16/solid";
 import ProjectSlider from "./Components/Slider";
+import {
+  DocumentIcon,
+  TechIcon,
+  MailIcon,
+  BriefcaseIcon,
+} from "./Components/AppIcons";
 
 type Stack = {
   name: string;
@@ -97,7 +102,7 @@ const Experience = () => {
       {experienceSummaryData.map((exp, idx) => (
         <div key={idx} className="relative flex flex-col gap-4 group z-10">
           <div className="absolute -inset-x-4 -inset-y-6 -z-10 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
-          <Link href={"#"} className="flex flex-col gap-4 ">
+          <Link href={"/experience"} className="flex flex-col gap-4 ">
             <p className="flex text-[#71717A] border-l-2 border-l-[#71717A] pl-4 text-sm">
               <span>
                 {exp.date_range}
@@ -110,7 +115,7 @@ const Experience = () => {
             </p>
           </Link>
           <Link
-            href={"#"}
+            href={"/experience"}
             className=" text-xs text-[#14B8A6] flex items-center gap-4">
             <span> Read Full Job Details</span>
             <RightChevron />
@@ -118,45 +123,6 @@ const Experience = () => {
         </div>
       ))}
     </div>
-  );
-};
-
-const TechImages = () => {
-  let rotations = ["rotate-2", "-rotate-2", "rotate-2"];
-
-  return (
-    <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[dictionaryImage, kanbanImage, devlinkImage].map(
-          (image, imageIndex) => (
-            <div
-              key={image.src}
-              className={clsx(
-                "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
-                rotations[imageIndex % rotations.length]
-              )}>
-              <Image
-                src={image}
-                alt=""
-                sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute inset-0 h-full w-full object-cover opacity-50"
-              />
-            </div>
-          )
-        )}
-      </div>
-    </div>
-  );
-};
-
-const TechIcon = ({
-  icon: Icon,
-  ...props
-}: React.ComponentPropsWithoutRef<"div"> & {
-  icon: React.ComponentType<{ className?: string }>;
-}) => {
-  return (
-    <Icon className="h-6 w-6 transition  dark:stroke-zinc-400 dark:group-hover:stroke-zinc-300" />
   );
 };
 
@@ -227,7 +193,7 @@ const TechStack = () => {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <div className="flex justify-between mb-4">
         <h2 className="flex items-center md:gap-2 mb-4">
-          <TechIcon icon={StackIcon} />
+          <TechIcon className="h-6 w-6 flex-none" />
           <span className="dark:text-white text-sm xs:text-base font-semibold">
             {" "}
             Tech Stack
@@ -249,32 +215,11 @@ const TechStack = () => {
   );
 };
 
-function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}>
-      <path
-        d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  );
-}
 const ContactComponent = () => {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <form action="/thank-you">
-        <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <MailIcon className="h-6 w-6 flex-none" />
           <span className="ml-3">Email Resume</span>
         </h2>
@@ -312,7 +257,7 @@ export default function Home() {
       <Container className="">
         <div className=" max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
-            Frontend Developer, aperiodic runner, loafer.
+            Frontend Developer, aperiodic runner, couch potato.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I'm Braile, a frontend developer from Benguet. I recently made the
@@ -328,13 +273,20 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      <div className=" text-white">
-        {/* <TechImages /> */}
-        <ProjectSlider />
-      </div>
+      <Container className="">
+        <h2 className="mt-6 sm:mt-10 flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+          <DocumentIcon className="h-6 w-6 flex-none" />
+          <span className="ml-3">Learning Initiatives</span>
+        </h2>
+      </Container>
+      <ProjectSlider />
       <Container className="mt-16">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col">
+            <h2 className="mb-8 flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              <BriefcaseIcon className="h-6 w-6 flex-none" />
+              <span className="ml-3">Employment Record</span>
+            </h2>
             <Experience />
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
