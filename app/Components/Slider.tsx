@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image, { type ImageProps } from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -9,28 +9,23 @@ import dictionaryImage from "../../public/dictionary-image.png";
 import kanbanImage from "../../public/kanban-image.png";
 import devlinkImage from "../../public/devlink-image.png";
 
-const SliderContainer = () => {
-  const rotations = ["rotate-2", "-rotate-2", "rotate-2"];
-  return [dictionaryImage, kanbanImage, devlinkImage].map(
-    (image, imageIndex) => (
-      <div
-        key={image.src}
-        className={clsx(
-          "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
-          rotations[imageIndex % rotations.length]
-        )}>
-        <Image
-          src={image}
-          alt=""
-          sizes="(min-width: 640px) 18rem, 11rem"
-          className="absolute h-full w-full object-cover opacity-50"
-        />
-      </div>
-    )
-  );
+const images = [
+  { src: "/dictionary-image.png", alt: "Dictionary Image" },
+  { src: "/kanban-image.png", alt: "Kanban Image" },
+  { src: "/devlink-image.png", alt: "Devlink Image" },
+];
+
+const preloadImages = (imageArray: any[]) => {
+  imageArray.forEach((image) => {
+    const img = new window.Image();
+    img.src = image.src;
+  });
 };
 
 const ProjectSlider = () => {
+  useEffect(() => {
+    preloadImages(images);
+  }, []);
   const responsive = {
     desktop: {
       breakpoint: {
@@ -45,7 +40,7 @@ const ProjectSlider = () => {
         max: 464,
         min: 0,
       },
-      items: 1,
+      items: 2,
       partialVisibilityGutter: 30,
     },
     tablet: {
@@ -60,48 +55,56 @@ const ProjectSlider = () => {
   const rotations = ["rotate-2", "-rotate-2", "rotate-2"];
   return (
     <Carousel
+      additionalTransfrom={0}
+      arrows
+      customTransition="all 500ms"
+      transitionDuration={500}
+      className=" max-w-[1280px] m-auto"
+      containerClass="container mt-16 py-2 overflow-hidden"
+      dotListClass=""
       draggable
-      className="mt-9  py-4 overflow-hidden"
-      slidesToSlide={1}
-      centerMode={true}
+      infinite
+      itemClass=" !w-52 sm:!w-96 !z-20"
+      minimumTouchDrag={80}
+      pauseOnHover
       responsive={responsive}
-      infinite={true}>
-      <div
-        className={clsx(
-          "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
-          rotations[0 % rotations.length]
-        )}>
-        <Image
-          src={kanbanImage}
-          alt=""
-          sizes="(min-width: 640px) 18rem, 11rem"
-          className="absolute h-full w-full object-cover"
-        />
-      </div>
-      <div
-        className={clsx(
-          "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
-          rotations[1 % rotations.length]
-        )}>
-        <Image
-          src={dictionaryImage}
-          alt=""
-          sizes="(min-width: 640px) 18rem, 11rem"
-          className="absolute h-full w-full object-cover"
-        />
-      </div>
-      <div
-        className={clsx(
-          "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
-          rotations[2 % rotations.length]
-        )}>
-        <Image
-          src={devlinkImage}
-          alt=""
-          sizes="(min-width: 640px) 18rem, 11rem"
-          className="absolute h-full w-full object-cover"
-        />
-      </div>
+      shouldResetAutoplay
+      slidesToSlide={1}
+      swipeable>
+      {images.map((image, index) => (
+        <div
+          key={index}
+          draggable={false}
+          className={clsx(
+            "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
+            rotations[index % rotations.length]
+          )}>
+          <img
+            draggable={false}
+            src={image.src}
+            alt={image.alt}
+            sizes="(min-width: 640px) 18rem, 11rem"
+            className="absolute h-full w-full object-cover"
+          />
+        </div>
+      ))}
+      {images.map((image, index) => (
+        <div
+          key={index}
+          draggable={false}
+          className={clsx(
+            "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 shadow-lg",
+            rotations[index % rotations.length]
+          )}>
+          <img
+            draggable={false}
+            src={image.src}
+            alt={image.alt}
+            sizes="(min-width: 640px) 18rem, 11rem"
+            className="absolute h-full w-full object-cover"
+          />
+        </div>
+      ))}
     </Carousel>
   );
 };
