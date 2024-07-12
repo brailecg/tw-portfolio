@@ -4,10 +4,6 @@ import Image, { type ImageProps } from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import clsx from "clsx";
-
-import dictionaryImage from "../../public/dictionary-image.png";
-import kanbanImage from "../../public/kanban-image.png";
-import devlinkImage from "../../public/devlink-image.png";
 import Link from "next/link";
 
 const images = [
