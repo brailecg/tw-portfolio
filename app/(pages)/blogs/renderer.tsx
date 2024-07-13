@@ -17,7 +17,27 @@ export const renderRichText = (document: Document) => {
       [BLOCKS.HEADING_2]: (node: any, children: React.ReactNode) => (
         <h2>{children}</h2>
       ),
+      [BLOCKS.EMBEDDED_ASSET]: (node: any, children: React.ReactNode) => (
+        <img
+          src={`https://${node.data.target.fields.file.url}`}
+          height={node.data.target.fields.file.details.image.height}
+          width={node.data.target.fields.file.details.image.width}
+          alt={node.data.target.fields.description}
+        />
+      ),
+      [BLOCKS.HR]: () => <hr />,
+
       // Add more block types as needed
+    },
+    renderText: (text: string) => {
+      return text
+        .split("\n")
+        .reduce(
+          (children: React.ReactNode[], textSegment: string, index: number) => {
+            return [...children, index > 0 && <br key={index} />, textSegment];
+          },
+          []
+        );
     },
   };
 

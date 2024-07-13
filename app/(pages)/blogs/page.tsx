@@ -45,6 +45,7 @@ const Blogs = async () => {
       <div className="mt-16 sm:mt-20 md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40 max-w-3xl space-y-16">
         {blogEntries.map((blog) => {
           const { slug, title, date, summary } = blog.fields;
+          const { id } = blog.sys;
           const parsedDate = date ? new Date(date) : undefined;
           const formattedDate = parsedDate
             ? dateFormatter({ date: parsedDate })
@@ -54,22 +55,26 @@ const Blogs = async () => {
             <div
               key={slug}
               className="md:grid md:grid-cols-4 md:items-baseline">
-              <p className="hidden md:flex text-[#71717A] pl-4 text-sm">
+              <time
+                dateTime={date}
+                className="hidden md:flex text-[#71717A] pl-4 text-sm">
                 {formattedDate}
-              </p>
+              </time>
               <div className="md:col-span-3 relative flex flex-col gap-4 group z-10">
                 <div className="absolute -inset-x-4 -inset-y-6 -z-10 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
-                <Link href={"#"} className="flex flex-col gap-4 ">
-                  <p className="flex md:hidden text-[#71717A] border-l-2 border-l-[#71717A] pl-4 text-sm">
-                    {formattedDate}
-                  </p>
+                <Link href={`/blogs/${id}`} className="flex flex-col gap-4 ">
+                  <time
+                    dateTime={date}
+                    className="flex md:hidden text-[#71717A] border-l-2 border-l-[#71717A] pl-4 text-sm">
+                    <span>{formattedDate}</span>
+                  </time>
                   <p className="dark:text-white font-semibold">{title}</p>
                   <div className="text-sm text-zinc-600 dark:text-zinc-400">
                     {renderRichText(summary as Document)}
                   </div>
                 </Link>
                 <Link
-                  href={"#"}
+                  href={`/blogs/${id}`}
                   className=" text-xs text-[#14B8A6] flex items-center gap-4">
                   <span> Read Full Article</span>
                   <RightChevron />

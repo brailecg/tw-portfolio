@@ -7,7 +7,13 @@ export interface TypeBlogFields {
   content?: EntryFields.RichText;
   summary?: EntryFields.RichText;
 }
+
+export interface TypeBlogSys {
+  id: string;
+}
+
 export type BlogEntry = {
+  sys: TypeBlogSys;
   fields: TypeBlogFields;
   contentTypeId: string;
 };
