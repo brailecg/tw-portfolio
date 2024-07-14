@@ -56,8 +56,8 @@ const About = () => {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className=" sm:leading-[3.5rem] text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Hi, I'm Braile. Pull over if you want to know more beyond my first
-            name.
+            Hi, I'm Braile. Read through if you want to know more beyond my
+            first name.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
@@ -74,12 +74,13 @@ const About = () => {
               anyone I just randomly meet.
             </p>
             <p>
-              While working these jobs is where I met people from different IT
-              industries/niches. It tickled my interest in pursuing a career in
-              the field, but given my non-existent savings at the time, I can't
-              afford to go back to school nor to quit my job and try my luck. I
-              can't just apply as someone with no experience. Good thing my
-              masters in Google search led me to a bootcamp for web developers.
+              While working these jobs is where I met people from the IT
+              industry. Working with them peaked my interest in pursuing a
+              career in the field, but given my non-existent savings at the
+              time, I can't afford to go back to school nor to quit my job and
+              try my luck. I can't just apply as someone with no experience.
+              Good thing my masters in Google search led me to a bootcamp for
+              web developers.
             </p>
             <p>
               I applied (yes, you have to apply to get in) and was granted

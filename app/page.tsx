@@ -214,10 +214,9 @@ export default function Home() {
             Frontend Developer, aperiodic runner, couch potato.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Braile, a frontend developer from Benguet. I recently made the
-            decision to put my dev learnings into the written, non-code form
-            through this blog site: <Link href="#"> localhost:3000 </Link>. Go
-            through them if you get the chance.
+            I'm Braile, a frontend developer. I'm a career shifter lucky to be
+            given an opportunity to join the industry after a fulfilling career
+            in customer service.
           </p>
           <div className="mt-6 flex space-x-6">
             <SocialLink href={"#"} icon={XIcon} />

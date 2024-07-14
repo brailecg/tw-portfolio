@@ -95,19 +95,18 @@ const Experience = () => {
     <Container>
       <div className=" max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
-          Switching Gears! But from customer service to another form of customer
-          service.
+          Switching Gears! From customer service to web development.
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
           I started out as a part of the customer service industry not knowing
-          when I do my career shift as a web developer, i'll still be doing the
+          when I did my career shift as a web developer, i'll still be doing the
           same... and more?? <span className=" text-2xl"> &#128529;</span>
         </p>
         <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-          Instead of customers over the phone, they're replaced with Project
-          Managers, Operations Managers, and sometimes the clients directly.
-          With the added complexity of coding. No complaints here though, I
-          enjoy every minute of it. <span className="text-2xl">&#128526;</span>
+          Instead of customers over the phone, I speak with Project Managers,
+          Operations Managers, and sometimes the clients directly. With the
+          added complexity of coding. No complaints here though since I enjoy
+          every minute of it. <span className="text-2xl">&#128526;</span>
         </p>
       </div>
       <div className="mt-10 grid gap-16 max-w-4xl">

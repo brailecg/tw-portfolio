@@ -62,9 +62,15 @@ const page = () => {
           List of personal projects I've been working on.
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I've been trying to better myself by building projects but I put here
-          things that are full fledge apps and those that I plan to work on more
-          fully.
+          I've been trying to better myself by building these projects.{" "}
+          <a
+            href="https://www.frontendmentor.io/"
+            target="_blank"
+            className=" text-teal-500">
+            Frontend Mentor
+          </a>{" "}
+          has been my go-to for projects that I can build for upskilling. Here
+          are some of them.
         </p>
       </div>
       <ul className="mt-10 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
