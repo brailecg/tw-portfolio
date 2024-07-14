@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Container } from "./Components/Container";
 import Image, { type ImageProps } from "next/image";
-import clsx from "clsx";
 
 import nextIcon from "../public/next-icon.svg";
 import reactIcon from "../public/react-icon.svg";
@@ -16,18 +15,9 @@ import {
   LinkedInIcon,
 } from "./Components/SocialIcons";
 
-import dictionaryImage from "../public/dictionary-image.png";
-import kanbanImage from "../public/kanban-image.png";
-import devlinkImage from "../public/devlink-image.png";
-
-import { ArrowDownIcon } from "@heroicons/react/16/solid";
 import ProjectSlider from "./Components/Slider";
-import {
-  DocumentIcon,
-  TechIcon,
-  MailIcon,
-  BriefcaseIcon,
-} from "./Components/AppIcons";
+import { DocumentIcon, TechIcon, BriefcaseIcon } from "./Components/AppIcons";
+import ContactComponent from "./Components/ContactComponent";
 
 type Stack = {
   name: string;
@@ -211,42 +201,6 @@ const TechStack = () => {
           return <TechItem key={index} stack={tech} />;
         })}
       </ul>
-    </div>
-  );
-};
-
-const ContactComponent = () => {
-  return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <form action="/thank-you">
-        <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-          <MailIcon className="h-6 w-6 flex-none" />
-          <span className="ml-3">Email Resume</span>
-        </h2>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          You can download the resume or have it sent to you. Just enter your
-          email and tap that send button
-        </p>
-        <div className="mt-6 flex">
-          <input
-            type="email"
-            placeholder="Email address"
-            aria-label="Email address"
-            required
-            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 "
-          />
-          <button
-            type="submit"
-            className="ml-4 flex-none bg-zinc-800 font-semibold text-zinc-100 hover:bg-zinc-700 active:bg-zinc-800 active:text-zinc-100/70 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-700 dark:active:text-zinc-100/70 inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none ">
-            Send
-          </button>
-        </div>
-      </form>
-
-      <button className="group mt-6 w-full inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </button>
     </div>
   );
 };

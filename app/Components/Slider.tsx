@@ -68,9 +68,8 @@ const ProjectSlider = () => {
         shouldResetAutoplay
         slidesToSlide={1}>
         {images.map((image, index) => (
-          <Link href={"/projects"}>
+          <Link key={index} href={"/projects"}>
             <div
-              key={index}
               draggable={false}
               className={clsx(
                 "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800  ring-zinc-900/5  ring-2 ring-offset-2",
@@ -87,9 +86,8 @@ const ProjectSlider = () => {
           </Link>
         ))}
         {images.map((image, index) => (
-          <Link href={"/projects"}>
+          <Link key={index} href={"/projects"}>
             <div
-              key={index}
               draggable={false}
               className={clsx(
                 "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800  ring-zinc-900/5  ring-2 ring-offset-2",
