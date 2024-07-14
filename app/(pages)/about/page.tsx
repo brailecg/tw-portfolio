@@ -7,6 +7,8 @@ import {
   XIcon,
   GitHubIcon,
   LinkedInIcon,
+  FrontendMentorIcon,
+  FacebookIcon,
 } from "@/app/Components/SocialIcons";
 import Link from "next/link";
 
@@ -100,18 +102,26 @@ const About = () => {
         </div>
         <div className=" lg:pl-20">
           <div className="mt-6 space-y-4">
-            <SocialLink href={"#"} icon={XIcon} text="Follow on X" />
-
             <SocialLink
-              href={"#"}
-              icon={InstagramIcon}
-              text="Follow on Instagram"
+              href={"https://github.com/brailecg"}
+              icon={GitHubIcon}
+              text="Follow on Github"
             />
-            <SocialLink href={"#"} icon={GitHubIcon} text="Follow on Github" />
             <SocialLink
-              href={"#"}
+              href={"https://www.linkedin.com/in/braile-gawigawen-86084a319/"}
               icon={LinkedInIcon}
               text="Follow on LinkedIn"
+            />
+            <SocialLink
+              href={"https://www.frontendmentor.io/profile/brailecg"}
+              icon={FrontendMentorIcon}
+              text="Follow on Frontend Mentor"
+            />
+
+            <SocialLink
+              href={"https://www.facebook.com/braile.gawigawen.3"}
+              icon={FacebookIcon}
+              text="Search on Facebook"
             />
           </div>
           <div className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40 flex">

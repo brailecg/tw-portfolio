@@ -13,6 +13,8 @@ import {
   XIcon,
   GitHubIcon,
   LinkedInIcon,
+  FrontendMentorIcon,
+  FacebookIcon,
 } from "./Components/SocialIcons";
 
 import ProjectSlider from "./Components/Slider";
@@ -32,7 +34,7 @@ const SocialLink = ({
   icon: React.ComponentType<{ className?: string }>;
 }) => {
   return (
-    <Link className="group -m-1 p-1" {...props}>
+    <Link className="group -m-1 p-1" target="_blank" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   );
@@ -219,10 +221,22 @@ export default function Home() {
             in customer service.
           </p>
           <div className="mt-6 flex space-x-6">
-            <SocialLink href={"#"} icon={XIcon} />
-            <SocialLink href={"#"} icon={InstagramIcon} />
-            <SocialLink href={"#"} icon={GitHubIcon} />
-            <SocialLink href={"#"} icon={LinkedInIcon} />
+            <SocialLink
+              href={"https://github.com/brailecg"}
+              icon={GitHubIcon}
+            />
+            <SocialLink
+              href={"https://www.linkedin.com/in/braile-gawigawen-86084a319/"}
+              icon={LinkedInIcon}
+            />
+            <SocialLink
+              href={"https://www.frontendmentor.io/profile/brailecg"}
+              icon={FrontendMentorIcon}
+            />
+            <SocialLink
+              href={"https://www.facebook.com/braile.gawigawen.3"}
+              icon={FacebookIcon}
+            />
           </div>
         </div>
       </Container>
