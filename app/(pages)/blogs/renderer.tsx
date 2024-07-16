@@ -1,5 +1,5 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, MARKS, Document } from "@contentful/rich-text-types";
+import { BLOCKS, MARKS, INLINES, Document } from "@contentful/rich-text-types";
 import React from "react";
 
 export const renderRichText = (document: Document) => {
@@ -46,7 +46,14 @@ export const renderRichText = (document: Document) => {
         return <li>{transformedChildren}</li>;
       },
 
-      // Add more block types as needed
+      [INLINES.HYPERLINK]: (node: any, children: React.ReactNode) => {
+        const { uri } = node.data;
+        return (
+          <a href={uri} className=" text-teal-500 underline">
+            {children}
+          </a>
+        );
+      },
     },
     renderText: (text: string) => {
       return text
