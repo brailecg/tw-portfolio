@@ -6,7 +6,6 @@ export const renderRichText = (document: Document) => {
   const options = {
     renderMark: {
       [MARKS.BOLD]: (text: React.ReactNode) => <strong>{text}</strong>,
-      [MARKS.CODE]: (text: React.ReactNode) => <p>{text}</p>,
     },
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node: any, children: React.ReactNode) => (
