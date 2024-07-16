@@ -5,6 +5,7 @@ import { BlogEntry } from "@/types/contentful/TypeBlog";
 import dateFormatter from "@/util/dateFormatter";
 import { renderRichText } from "../renderer";
 import { Document } from "@contentful/rich-text-types";
+import NotFound from "@/app/not-found";
 
 const client = createClient({
   space: process.env.SPACE_ID as string,
@@ -24,7 +25,7 @@ const getBlogEntry = async ({ id }: { id: string }): Promise<BlogEntry> => {
 
 const BlogArticle = async ({ params }: { params: { id: string } }) => {
   const article = await getBlogEntry({ id: params.id });
-  if (article) {
+  if (article && article?.fields && article?.fields?.title) {
     const { title, date, content } = article?.fields;
     const parsedDate = date ? new Date(date) : undefined;
     const formattedDate = parsedDate
@@ -55,6 +56,8 @@ const BlogArticle = async ({ params }: { params: { id: string } }) => {
       </Container>
     );
   }
+
+  return <NotFound />;
 };
 
 export default BlogArticle;
