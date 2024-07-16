@@ -105,23 +105,23 @@ const About = () => {
             <SocialLink
               href={"https://github.com/brailecg"}
               icon={GitHubIcon}
-              text="Follow on Github"
+              text="Check my Github"
             />
             <SocialLink
               href={"https://www.linkedin.com/in/braile-gawigawen-86084a319/"}
               icon={LinkedInIcon}
-              text="Follow on LinkedIn"
+              text="Connect on LinkedIn"
             />
             <SocialLink
               href={"https://www.frontendmentor.io/profile/brailecg"}
               icon={FrontendMentorIcon}
-              text="Follow on Frontend Mentor"
+              text="Join Frontend Mentor"
             />
 
             <SocialLink
               href={"https://www.facebook.com/braile.gawigawen.3"}
               icon={FacebookIcon}
-              text="Search on Facebook"
+              text="Add on Facebook"
             />
           </div>
           <div className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40 flex">
@@ -129,7 +129,7 @@ const About = () => {
               className="group flex items-center text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
               href="mailto:brailegawen@gmail.com">
               <MailIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
-              <span className="ml-4"> brailegawen@gmail.com</span>
+              <span className="ml-4">braile.c.gawigawen@gmail.com</span>
             </Link>
           </div>
         </div>

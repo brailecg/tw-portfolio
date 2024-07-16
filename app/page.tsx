@@ -217,7 +217,7 @@ export default function Home() {
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I'm Braile, a frontend developer. I'm a career shifter lucky to be
-            given an opportunity to join the industry after a fulfilling career
+            given an opportunity to join the industry after a rewarding career
             in customer service.
           </p>
           <div className="mt-6 flex space-x-6">
