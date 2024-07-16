@@ -6,6 +6,7 @@ export const renderRichText = (document: Document) => {
   const options = {
     renderMark: {
       [MARKS.BOLD]: (text: React.ReactNode) => <strong>{text}</strong>,
+      [MARKS.CODE]: (text: React.ReactNode) => <p>{text}</p>,
     },
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node: any, children: React.ReactNode) => (
@@ -26,6 +27,24 @@ export const renderRichText = (document: Document) => {
         />
       ),
       [BLOCKS.HR]: () => <hr />,
+      [BLOCKS.UL_LIST]: (node: any, children: React.ReactNode) => (
+        <ul>{children}</ul>
+      ),
+      [BLOCKS.OL_LIST]: (node: any, children: React.ReactNode) => (
+        <ol className="list-decimal list-inside">{children}</ol>
+      ),
+      [BLOCKS.LIST_ITEM]: (node: any, children: React.ReactNode) => {
+        const transformedChildren = documentToReactComponents(node, {
+          renderMark: options.renderMark,
+          renderNode: {
+            [BLOCKS.PARAGRAPH]: (node: any, children: React.ReactNode) =>
+              children,
+            [BLOCKS.LIST_ITEM]: (node: any, children: React.ReactNode) =>
+              children,
+          },
+        });
+        return <li>{transformedChildren}</li>;
+      },
 
       // Add more block types as needed
     },
