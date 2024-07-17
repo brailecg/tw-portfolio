@@ -6,30 +6,35 @@ import { RightChevron } from "@/app/page";
 const experienceSummaryData = [
   {
     id: 1,
-    date_range: "January 2018 - August 2021",
-    company_name: "Resource Box Int'l",
-    position: "Web Developer",
+    date_range: "June 2022 - Apr 2024",
+    company_name: "Accenture PH",
+    position: "Appliciation Development Team Lead",
     summary:
-      "My first job as a developer. I was hired as part of a team maintaining legacy systems and creating internal web apps for other departments",
-    tech_stack: ["PHP", "Javascript", "JQuery", "MySql", "REST", "Bootstrap"],
+      "I was part of the Salesforce team where I was involved in two projects. As a javascript developer for a government website and a team lead for the integration team for an insurance company",
+    tech_stack: [
+      "Javacript",
+      "Apex",
+      "REST",
+      "Salesforce Object Query Language (SOQL)",
+    ],
     contributions: [
       {
         id: 1,
-        title: "Pricing Portal",
+        title: "Web Survey",
         description:
-          "A ticketing web app used by our Pricing Dept and Sales team for negotiating better pricing for customers.",
+          "Using Salesforce Marketing Cloud, created a web survey for select pages on client's website using pure javascript.",
       },
       {
         id: 2,
-        title: "Customer Registration Portal",
+        title: "Recommendation Section",
         description:
-          "a web app for our compliance department to register a customer who has submitted complete requirements for them to access our customer ordering portal and formulary.",
+          "Using Salesforce Einstein recommendation, built, using javascript , a section on the client's website where users can see recommended services and/or products based on their history",
       },
       {
         id: 3,
-        title: "Supply Chain Managment Portal",
+        title: "Data Integration",
         description:
-          "a ticketing web app for our Supply Chain department and Pricing department for negotiating better supplier pricing",
+          "Assigned as developer and lead of the integration team to build the correct data from salesforce that will be sent to client's insurance web app using Apex",
       },
     ],
   },
@@ -58,34 +63,30 @@ const experienceSummaryData = [
   },
   {
     id: 3,
-    date_range: "June 2022 - Apr 2024",
-    company_name: "Accenture PH",
-    position: "Appliciation Development Team Lead",
+    date_range: "January 2018 - August 2021",
+    company_name: "Resource Box Int'l",
+    position: "Web Developer",
     summary:
-      "I was part of the Salesforce team where I was involved in two projects. As a javascript developer for a government website and a team lead for the integration team for an insurance company",
-    tech_stack: [
-      "Javacript",
-      "Apex",
-      "Salesforce Object Query Language (SOQL)",
-    ],
+      "My first job as a developer. I was hired as part of a team maintaining legacy systems and creating internal web apps for other departments",
+    tech_stack: ["PHP", "Javascript", "JQuery", "MySql", "REST", "Bootstrap"],
     contributions: [
       {
         id: 1,
-        title: "Web Survey",
+        title: "Pricing Portal",
         description:
-          "Using a Salesforce proprietary portal, create a web survey for a certain page using pure javascript",
+          "Built a ticketing web app used by our Pricing Dept and Sales team for negotiating better pricing for customers.",
       },
       {
         id: 2,
-        title: "Recommendation Section",
+        title: "Customer Registration Portal",
         description:
-          "Using Salesforce Einstein recommendation, build using javascript a section on the client's website where user's can see recommended services and/or products based on their history",
+          "Built a web app for our compliance department to register a customer who has submitted complete requirements for them to access our customer ordering portal and formulary.",
       },
       {
         id: 3,
-        title: "Data Integration",
+        title: "Supply Chain Managment Portal",
         description:
-          "Developer and lead of the integration team to build the correct data from salesforce that will be sent to client's insurance web app using Apex",
+          "Built a ticketing web app for our Supply Chain department and Pricing department for negotiating better supplier pricing",
       },
     ],
   },
