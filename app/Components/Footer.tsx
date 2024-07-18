@@ -20,7 +20,15 @@ function NavLink({
 
 export default function Footer() {
   return (
-    <footer className="mt-32 flex-none">
+    <footer className="mt-32 flex-none relative ">
+      <div className="text-xs left-5 bottom-5 origin-bottom-left -rotate-90 absolute text-zinc-800 dark:text-zinc-100 opacity-50">
+        design from{" "}
+        <a
+          href="https://tailwindui.com/"
+          className=" text-teal-900 dark:text-teal-100">
+          https://tailwindui.com
+        </a>
+      </div>
       <ContainerOuter>
         <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
           <ContainerInner>
