@@ -20,6 +20,7 @@ import {
 import ProjectSlider from "./Components/Slider";
 import { DocumentIcon, TechIcon, BriefcaseIcon } from "./Components/AppIcons";
 import ContactComponent from "./Components/ContactComponent";
+import CaptchaWrapper from "./CaptchaWrapper";
 
 type Stack = {
   name: string;
@@ -257,7 +258,9 @@ export default function Home() {
             <Experience />
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <ContactComponent />
+            <CaptchaWrapper>
+              <ContactComponent />
+            </CaptchaWrapper>
             <TechStack />
           </div>
         </div>

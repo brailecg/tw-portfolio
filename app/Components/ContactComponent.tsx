@@ -1,12 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+
 import { MailIcon } from "./AppIcons";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { ArrowDownIcon } from "@heroicons/react/16/solid";
 import Loader from "./Loader";
 
 const ContactComponent = () => {
-  let hostUrl: string;
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [responseCode, setResponseCode] = useState(200);
@@ -21,9 +24,22 @@ const ContactComponent = () => {
   };
 
   const sendResume = async (formData: FormData) => {
-    const sendResume = await fetch(`${hostUrl}/api/send`, {
+    if (!executeRecaptcha) {
+      console.log("not able to execute recaptcha");
+      return;
+    }
+
+    const gRecaptchaToken = await executeRecaptcha("inquirySubmit");
+    const sendResume = await fetch(`${window.location.origin}/api/send`, {
       method: "POST",
-      body: JSON.stringify({ requestorEmail: formData.get("requestorEmail") }),
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        requestorEmail: formData.get("requestorEmail"),
+        gRecaptchaToken,
+      }),
     });
 
     sentDialog(sendResume?.status ? sendResume?.status : 500);
@@ -33,10 +49,6 @@ const ContactComponent = () => {
     setIsLoading(true);
     sendResume(formData);
   };
-
-  useEffect(() => {
-    hostUrl = window.location.origin;
-  }, []);
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">

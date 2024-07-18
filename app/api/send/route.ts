@@ -4,10 +4,8 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(request: Request) {
-  const { requestorEmail } = await request.json();
+async function sendResume(requestorEmail: string) {
   const filePath = path.resolve("./public/brailegawigawen.pdf");
-
   // Read the file and encode it in Base64
   const fileContent = await fs.readFile(filePath, "base64");
 
@@ -32,5 +30,44 @@ export async function POST(request: Request) {
     return Response.json(data);
   } catch (error) {
     return Response.json({ error }, { status: 500 });
+  }
+}
+
+export async function POST(request: Request) {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  const { requestorEmail, gRecaptchaToken } = await request.json();
+
+  const recaptchaData = `secret=${secretKey}&response=${gRecaptchaToken}`;
+
+  let res;
+  try {
+    res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      body: recaptchaData,
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          return Response.json({ status: 500 });
+        }
+        return response.json(); // assuming the response is JSON
+      })
+      .then((data) => {
+        return data;
+      })
+      .catch((error) => {
+        console.error(
+          "There has been a problem with your fetch operation:",
+          error
+        );
+      });
+  } catch (e) {
+    return Response.json({ status: 500 });
+  }
+
+  if (res && res?.success && res?.score > 0.5) {
+    return sendResume(requestorEmail);
   }
 }
