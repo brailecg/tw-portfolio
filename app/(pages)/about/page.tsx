@@ -77,7 +77,7 @@ const About = () => {
             </p>
             <p>
               While working these jobs is where I met people from the IT
-              industry. Working with them peaked my interest in pursuing a
+              industry. Working with them piqued my interest in pursuing a
               career in the field, but given my non-existent savings at the
               time, I can't afford to go back to school nor to quit my job and
               try my luck. I can't just apply as someone with no experience.
