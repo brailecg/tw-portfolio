@@ -8,9 +8,9 @@ import jsIcon from "../public/js-icon.svg";
 import phpIcon from "../public/php-icon.svg";
 import supabaseIcon from "../public/supabase-icon.svg";
 import tailwindIcon from "../public/tailwind-icon.svg";
+import gitIcon from "../public/git-icon.svg";
+import mysqlIcon from "../public/mysql-icon.svg";
 import {
-  InstagramIcon,
-  XIcon,
   GitHubIcon,
   LinkedInIcon,
   FrontendMentorIcon,
@@ -21,6 +21,8 @@ import ProjectSlider from "./Components/Slider";
 import { DocumentIcon, TechIcon, BriefcaseIcon } from "./Components/AppIcons";
 import ContactComponent from "./Components/ContactComponent";
 import CaptchaWrapper from "./CaptchaWrapper";
+
+import { getExperiences, getProjects } from "@/contentful/client";
 
 type Stack = {
   name: string;
@@ -59,37 +61,9 @@ export const RightChevron = () => {
   );
 };
 
-const experienceSummaryData = [
-  {
-    id: 1,
-    date_range: "January 2018 - August 2021",
-    company_name: "Resource Box Int'l",
-    position: "Web Developer",
-    summary:
-      "My first job as a developer. I was hired as part of a team maintaining legacy systems and creating internal web apps for other departments",
-    tech_stack: ["PHP", "Javascript", "JQuery", "MySql"],
-  },
-  {
-    id: 2,
-    date_range: "September 2021 - May 2022",
-    company_name: "Morivy Data and Techonologies",
-    position: "Junior Developer",
-    summary:
-      "This is a startup. I was hired as a developer focused in frontend development.",
-    tech_stack: ["React", "NextJs"],
-  },
-  {
-    id: 3,
-    date_range: "June 2022 - Apr 2024",
-    company_name: "Accenture PH",
-    position: "Appliciation Development Team Lead",
-    summary:
-      "I was part of the Salesforce team. I was assigned to two projects. First was as a javascript developer. Second was as a lead for a team focused in integration using Apex (Salesforce's proprietary programming language)",
-    tech_stack: ["React", "NextJs"],
-  },
-];
+const Experience = async () => {
+  const experienceSummaryData = await getExperiences();
 
-const Experience = () => {
   return (
     <div className="grid gap-16 ">
       {experienceSummaryData.map((exp, idx) => (
@@ -98,13 +72,15 @@ const Experience = () => {
           <Link href={"/experience"} className="flex flex-col gap-4 ">
             <p className="flex text-[#71717A] border-l-2 border-l-[#71717A] pl-4 text-sm">
               <span>
-                {exp.date_range}
-                {" : "} {exp.position}
+                {exp.fields?.employmentDateRange}
+                {" : "} {exp.fields?.positionTitle}
               </span>
             </p>
-            <p className="dark:text-white font-semibold">{exp.company_name}</p>
+            <p className="dark:text-white font-semibold">
+              {exp.fields?.company}
+            </p>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              {exp.summary}
+              {exp.fields?.summary}
             </p>
           </Link>
           <Link
@@ -180,6 +156,16 @@ const TechStack = () => {
       logo: tailwindIcon,
       yearsOfExperience: "1 year",
     },
+    {
+      name: "Git",
+      logo: gitIcon,
+      yearsOfExperience: "4 years",
+    },
+    {
+      name: "Mysql",
+      logo: mysqlIcon,
+      yearsOfExperience: "3 years",
+    },
   ];
 
   return (
@@ -208,7 +194,8 @@ const TechStack = () => {
   );
 };
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getProjects();
   return (
     <>
       <Container className="">
@@ -247,7 +234,7 @@ export default function Home() {
           <span className="ml-3">Learning Initiatives</span>
         </h2>
       </Container>
-      <ProjectSlider />
+      <ProjectSlider projects={projects} />
       <Container className="mt-16">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col">

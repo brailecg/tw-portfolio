@@ -1,11 +1,11 @@
 import { Container } from "@/app/Components/Container";
 import React from "react";
 import Image from "next/image";
-
-import dictionaryImage from "../../../public/dictionary-image.png";
-import kanbanImage from "../../../public/kanban-image.png";
-import devlinkImage from "../../../public/devlink-image.png";
 import Link from "next/link";
+
+import { getProjects } from "@/contentful/client";
+import { AssetDetails, AssetFile } from "contentful";
+import { LinkObject } from "@/types/contentful/TypeProjects";
 
 const LinkIcon = (props: React.ComponentPropsWithoutRef<"svg">) => {
   return (
@@ -18,43 +18,17 @@ const LinkIcon = (props: React.ComponentPropsWithoutRef<"svg">) => {
   );
 };
 
-const projectListArray = [
-  {
-    id: 1,
-    name: "Kanban App",
-    description: "A web app used for personal project management.",
-    links: {
-      linkName: "Kanban.app",
-      web: "https://fm-kanban-psi.vercel.app/auth",
-      gh: "https://github.com/brailecg/fm-kanban",
-    },
-    image: kanbanImage,
-  },
-  {
-    id: 2,
-    name: "Link Sharing App",
-    description: "A web app used for building a sharable social links.",
-    links: {
-      linkName: "linkSharing.app",
-      web: "https://fm-link-sharing-app-two.vercel.app/login",
-      gh: "https://github.com/brailecg/fm-link-sharing-app",
-    },
-    image: devlinkImage,
-  },
-  {
-    id: 3,
-    name: "Simple Dictionary App",
-    description: "A dictionary web app.",
-    links: {
-      linkName: "dictionary.app",
-      web: "https://fm-dictionary.vercel.app/",
-      gh: "https://github.com/brailecg/fm-dictionary",
-    },
-    image: dictionaryImage,
-  },
-];
+const parseLinksObject = (linksList: LinkObject | undefined) => {
+  return JSON.parse(JSON.stringify(linksList))[0];
+};
 
-const page = () => {
+const parseImageDetail = (img: AssetFile | AssetDetails | undefined) => {
+  return JSON.parse(JSON.stringify(img));
+};
+
+const Projects = async () => {
+  const projectList = await getProjects();
+
   return (
     <Container>
       <div className=" max-w-3xl">
@@ -62,7 +36,8 @@ const page = () => {
           List of personal projects I've been working on.
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I've been trying to better myself by building these projects.{" "}
+          I've been trying to better myself by building more personal projects
+          focused on making figma designs full-fledged apps.{" "}
           <a
             href="https://www.frontendmentor.io/"
             target="_blank"
@@ -74,38 +49,48 @@ const page = () => {
         </p>
       </div>
       <ul className="mt-10 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-        {projectListArray?.map((item) => {
+        {projectList?.map((item) => {
           return (
             <li
-              key={item.id}
+              key={item.fields.name}
               className="group relative flex flex-col justify-center items-start">
               <div className="relative z-10 flex items-center justify-center bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
-                  src={item?.image}
+                  src={`https:${item.fields.image?.fields.file?.url}`}
+                  width={
+                    parseImageDetail(item.fields.image?.fields.file?.details)
+                      .image.width
+                  }
+                  height={
+                    parseImageDetail(item.fields.image?.fields.file?.details)
+                      .image.height
+                  }
                   alt="image sample"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
-                <span className="relative z-10">{item?.name}</span>
+                <span className="relative z-10">{item.fields.name}</span>
               </h2>
               <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400 min-h-10">
-                {item?.description}
+                {item.fields.description}
               </p>
               <div className="flex space-x-6 sm:mt-6">
                 <Link
                   rel="noopener noreferrer"
                   target="_blank"
-                  href={item?.links?.web}
+                  href={parseLinksObject(item.fields.linksObject).appLink}
                   className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
                   <LinkIcon className="h-6 w-6 flex-none" />
-                  <span>{item?.links?.linkName}</span>
+                  <span>
+                    {parseLinksObject(item.fields.linksObject).linkName}
+                  </span>
                 </Link>
                 <Link
                   rel="noopener noreferrer"
                   target="_blank"
-                  href={item?.links?.gh}
+                  href={parseLinksObject(item.fields.linksObject).githubLink}
                   className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
                   <LinkIcon className="h-6 w-6 flex-none" />
                   <span>github.com</span>
@@ -119,4 +104,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Projects;

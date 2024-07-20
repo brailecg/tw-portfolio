@@ -1,13 +1,13 @@
-import type { Entry, EntryFields } from "contentful";
+import type { Asset, Entry, EntryFields } from "contentful";
 
 export interface TypeBlogFields {
   title?: EntryFields.Symbol;
   slug?: EntryFields.Symbol;
   date?: EntryFields.Date;
-  content?: EntryFields.RichText;
   summary?: EntryFields.RichText;
+  content?: EntryFields.RichText;
+  dedicatedImage?: Asset;
 }
-
 export interface TypeBlogSys {
   id: string;
 }

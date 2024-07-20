@@ -27,7 +27,7 @@ export const renderRichText = (document: Document) => {
       ),
       [BLOCKS.HR]: () => <hr />,
       [BLOCKS.UL_LIST]: (node: any, children: React.ReactNode) => (
-        <ul>{children}</ul>
+        <ul className="list-disc list-inside grid gap-2">{children}</ul>
       ),
       [BLOCKS.OL_LIST]: (node: any, children: React.ReactNode) => (
         <ol className="list-decimal list-inside">{children}</ol>

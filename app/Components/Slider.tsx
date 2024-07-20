@@ -1,28 +1,18 @@
 "use client";
-import React, { useEffect } from "react";
-import Image, { type ImageProps } from "next/image";
+import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import clsx from "clsx";
 import Link from "next/link";
+import { ProjectEntry } from "@/types/contentful";
 
-const images = [
-  { src: "/dictionary-image.png", alt: "Dictionary Image" },
-  { src: "/kanban-image.png", alt: "Kanban Image" },
-  { src: "/devlink-image.png", alt: "Devlink Image" },
-];
-
-const preloadImages = (imageArray: any[]) => {
-  imageArray.forEach((image) => {
-    const img = new window.Image();
-    img.src = image.src;
+const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
+  const projectImages = projects?.map((project) => {
+    return {
+      src: project.fields.image?.fields.file?.url as string | undefined,
+      alt: project.fields.image?.fields.file?.fileName as string | undefined,
+    };
   });
-};
-
-const ProjectSlider = () => {
-  useEffect(() => {
-    preloadImages(images);
-  }, []);
   const responsive = {
     desktop: {
       breakpoint: {
@@ -67,7 +57,7 @@ const ProjectSlider = () => {
         responsive={responsive}
         shouldResetAutoplay
         slidesToSlide={1}>
-        {images.map((image, index) => (
+        {projectImages.map((image, index) => (
           <Link key={index} href={"/projects"}>
             <div
               draggable={false}
@@ -85,7 +75,7 @@ const ProjectSlider = () => {
             </div>
           </Link>
         ))}
-        {images.map((image, index) => (
+        {projectImages.map((image, index) => (
           <Link key={index} href={"/projects"}>
             <div
               draggable={false}

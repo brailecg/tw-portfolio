@@ -2,30 +2,10 @@ import { Container } from "@/app/Components/Container";
 import { RightChevron } from "@/app/page";
 import Link from "next/link";
 import React from "react";
-import { createClient, EntryCollection } from "contentful";
 import { Document } from "@contentful/rich-text-types";
-import { renderRichText } from "./renderer";
+import { renderRichText } from "@/contentful/renderer";
 import dateFormatter from "../../../util/dateFormatter";
-import { BlogEntry } from "@/types/contentful/TypeBlog";
-
-const client = createClient({
-  space: process.env.SPACE_ID as string,
-  accessToken: process.env.ACCESS_TOKEN as string,
-});
-
-const getBlogEntries = async (): Promise<BlogEntry[]> => {
-  try {
-    const entries: EntryCollection<BlogEntry> =
-      await client.getEntries<BlogEntry>({
-        content_type: "blog",
-      });
-
-    return entries.items as unknown as BlogEntry[];
-  } catch (error) {
-    console.error("Error retrieving blog entries:", error);
-    return [];
-  }
-};
+import { getBlogEntries } from "@/contentful/client";
 
 const Blogs = async () => {
   const blogEntries = await getBlogEntries();

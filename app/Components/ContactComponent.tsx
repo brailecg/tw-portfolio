@@ -25,7 +25,7 @@ const ContactComponent = () => {
 
   const sendResume = async (formData: FormData) => {
     if (!executeRecaptcha) {
-      console.log("not able to execute recaptcha");
+      console.error("not able to execute recaptcha");
       return;
     }
 
