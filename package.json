@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "cf-export": "contentful space export --config contentful/export-config.json --management-token CFPAT-FzUzPwoSQR88_SoTku32iGVhyZDpvV2LjaXxWb1jgW4 --space-id qix1mezffbig",
-    "cf-generate-types": "cf-content-types-generator contentful/export.json --out types/contentful"
+    "lint": "next lint"
   },
   "dependencies": {
     "@ant-design/react-slick": "^1.1.2",
