@@ -3,7 +3,7 @@ import React from "react";
 import { createClient, Entry } from "contentful";
 import { BlogEntry } from "@/types/contentful/TypeBlog";
 import dateFormatter from "@/util/dateFormatter";
-import { renderRichText } from "@/contentful/renderer";
+import { renderRichText } from "@/app/Components/renderer";
 import { Document } from "@contentful/rich-text-types";
 import NotFound from "@/app/not-found";
 

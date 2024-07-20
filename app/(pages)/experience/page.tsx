@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "../../Components/Container";
 import { getExperiences } from "@/contentful/client";
-import { renderRichText } from "@/contentful/renderer";
+import { renderRichText } from "@/app/Components/renderer";
 
 const Experience = async () => {
   const experienceList = await getExperiences();

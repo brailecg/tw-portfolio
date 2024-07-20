@@ -3,7 +3,7 @@ import { RightChevron } from "@/app/page";
 import Link from "next/link";
 import React from "react";
 import { Document } from "@contentful/rich-text-types";
-import { renderRichText } from "@/contentful/renderer";
+import { renderRichText } from "@/app/Components/renderer";
 import dateFormatter from "../../../util/dateFormatter";
 import { getBlogEntries } from "@/contentful/client";
 
