@@ -11,6 +11,7 @@ export interface TypeProjectsFields {
   description: EntryFields.Text;
   image?: Asset;
   linksObject?: LinkObject;
+  techStack: string[];
 }
 
 export interface TypeProjectSys {
