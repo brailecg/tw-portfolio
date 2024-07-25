@@ -2,25 +2,7 @@ import React from "react";
 import { Container } from "../../Components/Container";
 import { getExperiences } from "@/contentful/client";
 import { renderRichText } from "@/app/Components/renderer";
-import { ExperienceEntry } from "@/types/contentful/TypeExperiences";
-
-export const sortExperiences = (experienceList: ExperienceEntry[]) => {
-  return experienceList.sort((a, b) => {
-    if (
-      ((a?.fields?.order as unknown as number) >
-        b?.fields?.order) as unknown as number
-    ) {
-      return -1;
-    }
-    if (
-      ((a?.fields?.order as unknown as number) <
-        b?.fields?.order) as unknown as number
-    ) {
-      return 1;
-    }
-    return 0;
-  });
-};
+import { sortExperiences } from "@/util/sortExperience";
 
 const Experience = async () => {
   const experienceList = await getExperiences();

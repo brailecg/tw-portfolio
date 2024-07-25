@@ -23,7 +23,7 @@ import ContactComponent from "./Components/ContactComponent";
 import CaptchaWrapper from "./CaptchaWrapper";
 
 import { getExperiences, getProjects } from "@/contentful/client";
-import { sortExperiences } from "./(pages)/experience/page";
+import { sortExperiences } from "@/util/sortExperience";
 
 type Stack = {
   name: string;
