@@ -17,8 +17,16 @@ const Blogs = async () => {
           Writing about anything Web Development and then some.
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Written form of any new things i've discovered and topics or concepts
-          I don't want to forget about.
+          These are mostly topics/concepts that are new to me that I don't want
+          to forget about. These are more guidelines than articles. There's no
+          writing structure, just writing how I came to do things.
+        </p>
+        <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
+          Also, each blog content came from{" "}
+          <a href="https://www.contentful.com/" className=" text-teal-500">
+            Contentful CMS
+          </a>
+          , so the look of each entry might change as I go along.
         </p>
       </div>
 

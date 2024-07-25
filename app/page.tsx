@@ -23,6 +23,7 @@ import ContactComponent from "./Components/ContactComponent";
 import CaptchaWrapper from "./CaptchaWrapper";
 
 import { getExperiences, getProjects } from "@/contentful/client";
+import { sortExperiences } from "./(pages)/experience/page";
 
 type Stack = {
   name: string;
@@ -63,7 +64,7 @@ export const RightChevron = () => {
 
 const Experience = async () => {
   const experienceSummaryData = await getExperiences();
-
+  sortExperiences(experienceSummaryData);
   return (
     <div className="grid gap-16 ">
       {experienceSummaryData.map((exp, idx) => (
@@ -201,12 +202,12 @@ export default async function Home() {
       <Container className="">
         <div className=" max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
-            Frontend Developer, aperiodic runner, couch potato.
+            Web Developer, aperiodic runner, couch potato.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Braile, a frontend developer. I'm a career shifter lucky to be
-            given an opportunity to join the industry after a rewarding career
-            in customer service.
+            I'm Braile, a web developer. A career shifter lucky to be given an
+            opportunity to join the industry after a rewarding career in
+            customer service.
           </p>
           <div className="mt-6 flex space-x-6">
             <SocialLink

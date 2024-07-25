@@ -2,9 +2,29 @@ import React from "react";
 import { Container } from "../../Components/Container";
 import { getExperiences } from "@/contentful/client";
 import { renderRichText } from "@/app/Components/renderer";
+import { ExperienceEntry } from "@/types/contentful/TypeExperiences";
+
+export const sortExperiences = (experienceList: ExperienceEntry[]) => {
+  return experienceList.sort((a, b) => {
+    if (
+      ((a?.fields?.order as unknown as number) >
+        b?.fields?.order) as unknown as number
+    ) {
+      return -1;
+    }
+    if (
+      ((a?.fields?.order as unknown as number) <
+        b?.fields?.order) as unknown as number
+    ) {
+      return 1;
+    }
+    return 0;
+  });
+};
 
 const Experience = async () => {
   const experienceList = await getExperiences();
+  sortExperiences(experienceList);
 
   return (
     <Container>
@@ -25,40 +45,41 @@ const Experience = async () => {
         </p>
       </div>
       <div className="mt-10 grid gap-16 max-w-4xl">
-        {experienceList.map((exp, idx) => (
-          <div key={idx} className="relative flex flex-col group z-10 gap-2">
-            <div className="absolute -inset-x-4 -inset-y-6 -z-10 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
-            <div className="flex flex-col gap-4 ">
-              <p className="flex text-[#71717A] border-l-2 border-l-[#71717A] pl-4 text-sm">
-                <span>
-                  {exp.fields.employmentDateRange}
-                  {" : "} {exp.fields.positionTitle}
-                </span>
-              </p>
-              <p className="dark:text-white font-semibold">
-                {exp.fields.company}
-              </p>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                {exp.fields.summary}
-              </p>
-            </div>
-
-            <div className="text-sm text-zinc-600 dark:text-zinc-400">
-              {renderRichText(exp.fields.details)}
-            </div>
-            <code className="dark:text-white font-semibold text-xs mt-2">
-              [
-              {exp.fields?.techStack?.map((item) => {
-                return (
-                  <span className="[&:nth-child(n+2)]:before:content-[',']">
-                    {item}
+        {experienceList.length > 0 &&
+          experienceList.map((exp, idx) => (
+            <div key={idx} className="relative flex flex-col group z-10 gap-2">
+              <div className="absolute -inset-x-4 -inset-y-6 -z-10 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
+              <div className="flex flex-col gap-4 ">
+                <p className="flex text-[#71717A] border-l-2 border-l-[#71717A] pl-4 text-sm">
+                  <span>
+                    {exp.fields.employmentDateRange}
+                    {" : "} {exp.fields.positionTitle}
                   </span>
-                );
-              })}
-              ]
-            </code>
-          </div>
-        ))}
+                </p>
+                <p className="dark:text-white font-semibold">
+                  {exp.fields.company}
+                </p>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  {exp.fields.summary}
+                </p>
+              </div>
+
+              <div className="text-sm text-zinc-600 dark:text-zinc-400">
+                {renderRichText(exp.fields.details)}
+              </div>
+              <code className="dark:text-white font-semibold text-xs mt-2">
+                [
+                {exp.fields?.techStack?.map((item) => {
+                  return (
+                    <span className="[&:nth-child(n+2)]:before:content-[',']">
+                      {item}
+                    </span>
+                  );
+                })}
+                ]
+              </code>
+            </div>
+          ))}
       </div>
     </Container>
   );

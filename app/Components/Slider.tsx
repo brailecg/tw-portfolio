@@ -70,7 +70,7 @@ const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
                 src={image.src}
                 alt={image.alt}
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute h-full w-full object-cover"
+                className="absolute h-full w-full object-cover opacity-80"
               />
             </div>
           </Link>
@@ -88,7 +88,7 @@ const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
                 src={image.src}
                 alt={image.alt}
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute h-full w-full object-cover"
+                className="absolute h-full w-full object-cover opacity-80"
               />
             </div>
           </Link>

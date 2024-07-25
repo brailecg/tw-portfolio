@@ -67,6 +67,7 @@ const Projects = async () => {
                   }
                   alt="image sample"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="opacity-80"
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
