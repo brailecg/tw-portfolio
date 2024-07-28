@@ -207,9 +207,9 @@ export default async function Home() {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Hello! I'm Braile, a web developer who has a knack in creating
             dynamic, user-friendly websites and web apps. I specialize in using
-            Javscript, while leveraging libraries and frameworks like Reactjs,
-            NextJs, and Tailwind Css, in build responsive and intuitive
-            applications.
+            Javscript while leveraging libraries and frameworks like Reactjs,
+            NextJs, and Tailwind CSS, among others, to build responsive and
+            intuitive applications.
           </p>
           <div className="mt-6 flex space-x-6">
             <SocialLink
