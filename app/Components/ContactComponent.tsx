@@ -58,8 +58,8 @@ const ContactComponent = () => {
           <span className="ml-3">Email Resume</span>
         </h2>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          You can download the resume or have it sent to you. Just enter your
-          email and tap that send button
+          You can download my resume below or have it sent to you. Just enter
+          your email and tap that send button.
         </p>
         <div className="mt-6 flex">
           <input
@@ -101,11 +101,11 @@ const ContactComponent = () => {
           </div>
         </div>
       </form>
-
+      <div className="w-full border border-zinc-100 dark:border-zinc-700/40 my-6" />
       <a
         href="/brailegawigawen.pdf"
         download
-        className="group mt-6 w-full inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70">
+        className="group w-full inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </a>

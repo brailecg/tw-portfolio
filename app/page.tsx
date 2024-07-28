@@ -205,9 +205,11 @@ export default async function Home() {
             Web Developer, aperiodic runner, couch potato.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Braile, a web developer. A career shifter lucky to be given an
-            opportunity to join the industry after a rewarding career in
-            customer service.
+            Hello! I'm Braile, a web developer who has a knack in creating
+            dynamic, user-friendly websites and web apps. I specialize in using
+            Javscript, while leveraging libraries and frameworks like Reactjs,
+            NextJs, and Tailwind Css, in build responsive and intuitive
+            applications.
           </p>
           <div className="mt-6 flex space-x-6">
             <SocialLink
