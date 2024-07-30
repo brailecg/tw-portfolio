@@ -101,7 +101,7 @@ const ContactComponent = () => {
           </div>
         </div>
       </form>
-      <div className="w-full border border-zinc-100 dark:border-zinc-700/40 my-6" />
+      <div className="w-full border-t border-zinc-100 dark:border-zinc-700/40 my-6" />
       <a
         href="/brailegawigawen.pdf"
         download

@@ -10,6 +10,8 @@ import supabaseIcon from "../public/supabase-icon.svg";
 import tailwindIcon from "../public/tailwind-icon.svg";
 import gitIcon from "../public/git-icon.svg";
 import mysqlIcon from "../public/mysql-icon.svg";
+import cssIcon from "../public/css-icon.svg";
+import nodeIcon from "../public/node-icon.svg";
 import {
   GitHubIcon,
   LinkedInIcon,
@@ -28,7 +30,7 @@ import { sortExperiences } from "@/util/sortExperience";
 type Stack = {
   name: string;
   logo: ImageProps["src"];
-  yearsOfExperience: string;
+  stackType: string;
 };
 
 const SocialLink = ({
@@ -98,26 +100,20 @@ const Experience = async () => {
 
 const TechItem = ({ stack }: { stack: Stack }) => {
   return (
-    <li className="flex items-center gap-4">
+    <li className="flex items-center gap-2 sm:gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         <Image
           src={stack.logo}
-          alt=""
+          alt={stack.name}
           className="h-7 w-7 rounded-full"
           unoptimized
         />
       </div>
       <dl className="flex items-center justify-between flex-auto gap-x-2">
         <div>
-          <dt className="sr-only">Company</dt>
+          <dt className="sr-only">Name</dt>
           <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
             {stack.name}
-          </dd>
-        </div>
-        <div>
-          <dt className="sr-only">Years of Experience</dt>
-          <dd className="ml-auto text-sm text-zinc-400 dark:text-zinc-500">
-            {stack.yearsOfExperience}
           </dd>
         </div>
       </dl>
@@ -130,45 +126,65 @@ const TechStack = () => {
     {
       name: "NextJs",
       logo: nextIcon,
-      yearsOfExperience: "1 year",
+      stackType: "fullstack",
     },
     {
       name: "ReactJs",
       logo: reactIcon,
-      yearsOfExperience: "1 year",
+      stackType: "frontend",
     },
     {
       name: "Javascript",
       logo: jsIcon,
-      yearsOfExperience: "4 years",
+      stackType: "frontend",
+    },
+
+    {
+      name: "NodeJs",
+      logo: nodeIcon,
+      stackType: "backend",
     },
     {
       name: "PHP",
       logo: phpIcon,
-      yearsOfExperience: "3 years",
+      stackType: "backend",
     },
     {
       name: "Supabase",
       logo: supabaseIcon,
-      yearsOfExperience: "3 months",
+      stackType: "backend",
     },
     {
       name: "Tailwind",
       logo: tailwindIcon,
-      yearsOfExperience: "1 year",
+      stackType: "frontend",
     },
     {
       name: "Git",
       logo: gitIcon,
-      yearsOfExperience: "4 years",
+      stackType: "other",
     },
     {
       name: "Mysql",
       logo: mysqlIcon,
-      yearsOfExperience: "3 years",
+      stackType: "backend",
+    },
+    {
+      name: "CSS",
+      logo: cssIcon,
+      stackType: "frontend",
     },
   ];
-
+  const fullstack = techStackList.filter(
+    (item) => item.stackType === "fullstack"
+  );
+  const frontstack = techStackList.filter(
+    (item) => item.stackType === "frontend"
+  );
+  const backstack = techStackList.filter(
+    (item) => item.stackType === "backend"
+  );
+  const otherstack = techStackList.filter((item) => item.stackType === "other");
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <div className="flex justify-between mb-4">
@@ -179,15 +195,21 @@ const TechStack = () => {
             Tech Stack
           </span>
         </h2>
-        <div className="flex flex-col text-end text-xs max-w-44 sm:max-w-48 dark:text-white ">
-          <span className="font-semibold">Years of Experience</span>
-          <span className=" text-[11px] italic">
-            (professional and non-professional)
-          </span>
-        </div>
       </div>
-      <ul className="flex flex-col gap-2 px-2">
-        {techStackList.map((tech, index) => {
+      <ul className="grid grid-cols-2 gap-2 px-2">
+        {fullstack.map((tech, index) => {
+          return <TechItem key={index} stack={tech} />;
+        })}
+        <li className=" col-span-2 border-t border-zinc-100 dark:border-zinc-700/40"></li>
+        {frontstack.map((tech, index) => {
+          return <TechItem key={index} stack={tech} />;
+        })}
+        <li className=" col-span-2 border-t border-zinc-100 dark:border-zinc-700/40"></li>
+        {backstack.map((tech, index) => {
+          return <TechItem key={index} stack={tech} />;
+        })}
+        <li className=" col-span-2 border-t border-zinc-100 dark:border-zinc-700/40"></li>
+        {otherstack.map((tech, index) => {
           return <TechItem key={index} stack={tech} />;
         })}
       </ul>
@@ -205,11 +227,15 @@ export default async function Home() {
             Web Developer, aperiodic runner, couch potato.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hello! I'm Braile, a web developer who has a knack in creating
-            dynamic, user-friendly websites and web apps. I specialize in using
-            Javscript while leveraging libraries and frameworks like Reactjs,
-            NextJs, and Tailwind CSS, among others, to build responsive and
-            intuitive applications.
+            Hello! I'm Braile, a web developer whose sole{" "}
+            <span className="relative">
+              purpose{" "}
+              <span className="absolute -top-[10px] -right-1 text-xs">
+                &#128517;
+              </span>
+            </span>{" "}
+            is creating dynamic, user-friendly websites and web apps. Just
+            scroll and click around and you can explore things all me in here.
           </p>
           <div className="mt-6 flex space-x-6">
             <SocialLink
@@ -238,6 +264,7 @@ export default async function Home() {
         </h2>
       </Container>
       <ProjectSlider projects={projects} />
+
       <Container className="mt-16">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col">
