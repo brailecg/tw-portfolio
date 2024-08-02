@@ -72,8 +72,8 @@ const About = () => {
               I eventually applied for a customer service job, stayed there for
               two years, applied for another one which lasted for a year and
               half. I can definitely attribute from these experiences my
-              improvement when dealing and communicating with others, from
-              colleagues to random acquaintances I encounter.
+              improvement when dealing and communicating with others, someone I
+              personally know or otherwise.
             </p>
             <p>
               While working these jobs is where I met people from the IT
