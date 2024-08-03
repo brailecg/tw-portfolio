@@ -6,6 +6,7 @@ import { Document } from "@contentful/rich-text-types";
 import { renderRichText } from "@/app/Components/renderer";
 import dateFormatter from "../../../util/dateFormatter";
 import { getBlogEntries } from "@/contentful/client";
+import AppMotionComponent from "@/app/Components/AppMotionComponent";
 
 const Blogs = async () => {
   const blogEntries = await getBlogEntries();
@@ -14,7 +15,7 @@ const Blogs = async () => {
     blogEntries &&
     blogEntries.length > 0 && (
       <Container>
-        <div className=" max-w-2xl">
+        <AppMotionComponent className=" max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
             Writing about anything Web Development and then some.
           </h1>
@@ -30,7 +31,7 @@ const Blogs = async () => {
             </a>
             , so the look of each entry might change as I go along.
           </p>
-        </div>
+        </AppMotionComponent>
 
         <div className="mt-16 sm:mt-20 md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40 max-w-3xl space-y-16">
           {blogEntries.map((blog) => {
@@ -42,7 +43,8 @@ const Blogs = async () => {
               : "Date not available";
 
             return (
-              <div
+              <AppMotionComponent
+                variant="opacityX"
                 key={slug}
                 className="md:grid md:grid-cols-4 md:items-baseline">
                 <time
@@ -70,7 +72,7 @@ const Blogs = async () => {
                     <RightChevron />
                   </Link>
                 </div>
-              </div>
+              </AppMotionComponent>
             );
           })}
         </div>
