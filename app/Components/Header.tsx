@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Container } from "./Container";
-import Image, { type ImageProps } from "next/image";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Popover,
@@ -12,6 +12,7 @@ import {
 import clsx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import navImage from "../../public/nav-image.jpeg";
+import AppMotionComponent from "./AppMotionComponent";
 
 const MoonIcon = (props: React.ComponentPropsWithoutRef<"svg">) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -48,13 +49,15 @@ const handleToggleTheme = () => {
 
 const ThemeToggle = () => {
   return (
-    <button
-      onClick={handleToggleTheme}
-      type="button"
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
-      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500" />
-    </button>
+    <AppMotionComponent variant="opacityX">
+      <button
+        onClick={handleToggleTheme}
+        type="button"
+        className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
+        <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
+        <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500" />
+      </button>
+    </AppMotionComponent>
   );
 };
 
@@ -88,15 +91,17 @@ const NavItem = ({
 
 const DesktopNav = () => {
   return (
-    <nav className="hidden sm:flex flex-1 justify-center items-center ">
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/">Home</NavItem>
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="/experience">Experience</NavItem>
-        <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/blogs">Blogs</NavItem>
-      </ul>
-    </nav>
+    <AppMotionComponent>
+      <nav className="hidden sm:flex flex-1 justify-center items-center ">
+        <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+          <NavItem href="/">Home</NavItem>
+          <NavItem href="/about">About</NavItem>
+          <NavItem href="/experience">Experience</NavItem>
+          <NavItem href="/projects">Projects</NavItem>
+          <NavItem href="/blogs">Blogs</NavItem>
+        </ul>
+      </nav>
+    </AppMotionComponent>
   );
 };
 
@@ -159,7 +164,9 @@ const Header = () => {
         <div className="top-0 h-16 pt-6 sticky">
           <Container className="">
             <div className="flex gap-4">
-              <div className="flex justify-start items-center flex-1">
+              <AppMotionComponent
+                variant="opacity"
+                className="flex justify-start items-center flex-1">
                 <Link
                   href={"/"}
                   className=" h-10 w-10 ring-1 ring-gray-300  rounded-full flex justify-center items-center">
@@ -175,7 +182,7 @@ const Header = () => {
                     />
                   </div>
                 </Link>
-              </div>
+              </AppMotionComponent>
               <div className="flex-1 flex justify-end sm:justify-center">
                 <MobileNav />
                 <DesktopNav />
