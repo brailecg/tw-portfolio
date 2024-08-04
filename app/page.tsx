@@ -279,7 +279,7 @@ export default async function Home() {
           </div>
           <AppMotionComponent
             variant="opacityInX"
-            className="space-y-10 lg:pl-16 xl:pl-24">
+            className="space-y-10 lg:pl-16 xl:pl-24 overflow-hidden">
             <CaptchaWrapper>
               <ContactComponent />
             </CaptchaWrapper>

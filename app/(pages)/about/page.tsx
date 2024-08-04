@@ -47,7 +47,9 @@ const About = () => {
   return (
     <Container>
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <AppMotionComponent variant="opacityInX" className="lg:pl-20">
+        <AppMotionComponent
+          variant="opacityInX"
+          className="lg:pl-20 overflow-hidden">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={aboutImage}
@@ -103,7 +105,9 @@ const About = () => {
             </p>
           </div>
         </AppMotionComponent>
-        <AppMotionComponent variant="opacityInX" className=" lg:pl-20">
+        <AppMotionComponent
+          variant="opacityInX"
+          className=" lg:pl-20 overflow-hidden">
           <div className="mt-6 space-y-4">
             <SocialLink
               href={"https://github.com/brailecg"}
