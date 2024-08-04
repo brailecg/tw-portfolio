@@ -11,8 +11,10 @@ const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
     return {
       src: project.fields.image?.fields.file?.url as string | undefined,
       alt: project.fields.image?.fields.file?.fileName as string | undefined,
+      name: project.fields.name as string | undefined,
     };
   });
+
   const responsive = {
     desktop: {
       breakpoint: {
@@ -58,11 +60,12 @@ const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
         shouldResetAutoplay
         slidesToSlide={1}>
         {projectImages.map((image, index) => (
-          <Link key={index} href={"/projects"}>
+          <Link key={index} href={"/projects"} className=" group">
             <div
+              data-project-name={image.name}
               draggable={false}
               className={clsx(
-                "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800  ring-zinc-900/5  ring-2 ring-offset-2",
+                "relative z-0 before:absolute before:content-[attr(data-project-name)] before:text-[white] before:font-black sm:before:text-[32px] before:flex before:justify-center before:items-center before:z-[2] before:bg-[black] before:opacity-[70%] before:transition-transform before:duration-[ease-in] before:delay-150 before:-translate-x-full before:translate-y-0 before:p-2 before:inset-0 hover:before:translate-x-[0%] hover:before:translate-y-0 aspect-[9/10] w-44 overflow-hidden rounded-xl  sm:w-72 sm:rounded-2xl ring-zinc-900/5  ring-2 ring-offset-2",
                 rotations[index % rotations.length]
               )}>
               <img
@@ -70,17 +73,18 @@ const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
                 src={image.src}
                 alt={image.alt}
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute h-full w-full object-cover opacity-80"
+                className="absolute h-full w-full object-cover  -z-10"
               />
             </div>
           </Link>
         ))}
         {projectImages.map((image, index) => (
-          <Link key={index} href={"/projects"}>
+          <Link key={index} href={"/projects"} className="group">
             <div
+              data-project-name={image.name}
               draggable={false}
               className={clsx(
-                "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800  ring-zinc-900/5  ring-2 ring-offset-2",
+                "relative z-0 before:absolute before:content-[attr(data-project-name)] before:text-[white] before:font-black sm:before:text-[32px] before:flex before:justify-center before:items-center before:z-[2] before:bg-[black] before:opacity-[70%] before:transition-transform before:duration-[ease-in] before:delay-150 before:-translate-x-full before:translate-y-0 before:p-2 before:inset-0 hover:before:translate-x-[0%] hover:before:translate-y-0 aspect-[9/10] w-44 overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl  ring-zinc-900/5  ring-2 ring-offset-2",
                 rotations[index % rotations.length]
               )}>
               <img
@@ -88,7 +92,7 @@ const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
                 src={image.src}
                 alt={image.alt}
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute h-full w-full object-cover opacity-80"
+                className="absolute h-full w-full object-cover  -z-10"
               />
             </div>
           </Link>

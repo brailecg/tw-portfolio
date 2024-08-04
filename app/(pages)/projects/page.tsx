@@ -53,7 +53,7 @@ const Projects = async () => {
           return (
             <li
               key={item.fields.name}
-              className="group relative flex flex-col justify-center items-start">
+              className="group relative flex flex-col justify-start items-start">
               <div className="relative z-10 flex items-center justify-center bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={`https:${item.fields.image?.fields.file?.url}`}
@@ -70,45 +70,47 @@ const Projects = async () => {
                   className="opacity-80"
                 />
               </div>
-              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
-                <span className="relative z-10">{item.fields.name}</span>
-              </h2>
-              <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400 ">
-                {item.fields.description}
-              </p>
+              <div className="mt-6 grid grid-rows-4 px-2 sm:px-1">
+                <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                  <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
+                  <span className="relative z-10">{item.fields.name}</span>
+                </h2>
+                <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400 ">
+                  {item.fields.description}
+                </p>
 
-              <code className="text-zinc-800 dark:text-zinc-100 text-[11px] mt-2 z-10">
-                [{" "}
-                {item.fields?.techStack?.map((tech, idx) => {
-                  return (
+                <code className="text-zinc-800 dark:text-zinc-100 text-[11px] mt-2 z-10">
+                  [{" "}
+                  {item.fields?.techStack?.map((tech, idx) => {
+                    return (
+                      <span>
+                        {tech}
+                        {idx === item.fields?.techStack.length - 1 ? "" : ", "}
+                      </span>
+                    );
+                  })}{" "}
+                  ]
+                </code>
+                <div className="flex space-x-6 sm:mt-6">
+                  <Link
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href={parseLinksObject(item.fields.linksObject).appLink}
+                    className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
+                    <LinkIcon className="h-6 w-6 flex-none" />
                     <span>
-                      {tech}
-                      {idx === item.fields?.techStack.length - 1 ? "" : ", "}
+                      {parseLinksObject(item.fields.linksObject).linkName}
                     </span>
-                  );
-                })}{" "}
-                ]
-              </code>
-              <div className="flex space-x-6 sm:mt-6">
-                <Link
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href={parseLinksObject(item.fields.linksObject).appLink}
-                  className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
-                  <LinkIcon className="h-6 w-6 flex-none" />
-                  <span>
-                    {parseLinksObject(item.fields.linksObject).linkName}
-                  </span>
-                </Link>
-                <Link
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href={parseLinksObject(item.fields.linksObject).githubLink}
-                  className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
-                  <LinkIcon className="h-6 w-6 flex-none" />
-                  <span>github.com</span>
-                </Link>
+                  </Link>
+                  <Link
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href={parseLinksObject(item.fields.linksObject).githubLink}
+                    className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
+                    <LinkIcon className="h-6 w-6 flex-none" />
+                    <span>github.com</span>
+                  </Link>
+                </div>
               </div>
             </li>
           );
