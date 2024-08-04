@@ -6,7 +6,6 @@ import Link from "next/link";
 import { getProjects } from "@/contentful/client";
 import { AssetDetails, AssetFile } from "contentful";
 import { LinkObject } from "@/types/contentful/TypeProjects";
-import AppMotionComponent from "@/app/Components/AppMotionComponent";
 
 const LinkIcon = (props: React.ComponentPropsWithoutRef<"svg">) => {
   return (
@@ -32,7 +31,7 @@ const Projects = async () => {
 
   return (
     <Container>
-      <AppMotionComponent className=" max-w-3xl">
+      <div className=" max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
           List of personal projects I've been working on.
         </h1>
@@ -48,80 +47,73 @@ const Projects = async () => {
           has been my go-to for projects that I can build for upskilling. Here
           are some of them.
         </p>
-      </AppMotionComponent>
-      <AppMotionComponent>
-        <ul className="mt-10 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          {projectList?.map((item) => {
-            return (
-              <li
-                key={item.fields.name}
-                className="group relative flex flex-col justify-between items-start">
-                <div className="relative z-10 flex items-center justify-center bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                  <Image
-                    src={`https:${item.fields.image?.fields.file?.url}`}
-                    width={
-                      parseImageDetail(item.fields.image?.fields.file?.details)
-                        .image.width
-                    }
-                    height={
-                      parseImageDetail(item.fields.image?.fields.file?.details)
-                        .image.height
-                    }
-                    alt="image sample"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="opacity-80"
-                  />
-                </div>
-                <div className="mt-6 min-h-40 flex flex-col justify-between">
-                  <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                    <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
-                    <span className="relative z-10">{item.fields.name}</span>
-                  </h2>
-                  <p className="relative z-10 text-sm text-zinc-600 dark:text-zinc-400 ">
-                    {item.fields.description}
-                  </p>
-                  <code className="text-zinc-800 dark:text-zinc-100 text-[11px] z-10">
-                    [{" "}
-                    {item.fields?.techStack?.map((tech, idx) => {
-                      return (
-                        <span>
-                          {tech}
-                          {idx === item.fields?.techStack.length - 1
-                            ? ""
-                            : ", "}
-                        </span>
-                      );
-                    })}{" "}
-                    ]
-                  </code>
-                  <div className="flex space-x-6 ">
-                    <Link
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      href={parseLinksObject(item.fields.linksObject).appLink}
-                      className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
-                      <LinkIcon className="h-6 w-6 flex-none" />
-                      <span>
-                        {parseLinksObject(item.fields.linksObject).linkName}
-                      </span>
-                    </Link>
-                    <Link
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      href={
-                        parseLinksObject(item.fields.linksObject).githubLink
-                      }
-                      className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
-                      <LinkIcon className="h-6 w-6 flex-none" />
-                      <span>github.com</span>
-                    </Link>
-                  </div>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </AppMotionComponent>
+      </div>
+      <ul className="mt-10 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        {projectList?.map((item) => {
+          return (
+            <li
+              key={item.fields.name}
+              className="group relative flex flex-col justify-center items-start">
+              <div className="relative z-10 flex items-center justify-center bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Image
+                  src={`https:${item.fields.image?.fields.file?.url}`}
+                  width={
+                    parseImageDetail(item.fields.image?.fields.file?.details)
+                      .image.width
+                  }
+                  height={
+                    parseImageDetail(item.fields.image?.fields.file?.details)
+                      .image.height
+                  }
+                  alt="image sample"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="opacity-80"
+                />
+              </div>
+              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
+                <span className="relative z-10">{item.fields.name}</span>
+              </h2>
+              <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400 ">
+                {item.fields.description}
+              </p>
+
+              <code className="text-zinc-800 dark:text-zinc-100 text-[11px] mt-2 z-10">
+                [{" "}
+                {item.fields?.techStack?.map((tech, idx) => {
+                  return (
+                    <span>
+                      {tech}
+                      {idx === item.fields?.techStack.length - 1 ? "" : ", "}
+                    </span>
+                  );
+                })}{" "}
+                ]
+              </code>
+              <div className="flex space-x-6 sm:mt-6">
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={parseLinksObject(item.fields.linksObject).appLink}
+                  className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
+                  <LinkIcon className="h-6 w-6 flex-none" />
+                  <span>
+                    {parseLinksObject(item.fields.linksObject).linkName}
+                  </span>
+                </Link>
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={parseLinksObject(item.fields.linksObject).githubLink}
+                  className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200 hover:font-bold">
+                  <LinkIcon className="h-6 w-6 flex-none" />
+                  <span>github.com</span>
+                </Link>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </Container>
   );
 };

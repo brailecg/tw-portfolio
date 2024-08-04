@@ -1,15 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import clsx from "clsx";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
 import { ProjectEntry } from "@/types/contentful";
-import AppMotionComponent from "./AppMotionComponent";
 
 const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
-  const [isImageLoading, setImageLoading] = useState<boolean>(true);
   const projectImages = projects?.map((project) => {
     return {
       src: project.fields.image?.fields.file?.url as string | undefined,
@@ -43,12 +40,8 @@ const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
     },
   };
   const rotations = ["rotate-2", "-rotate-2", "rotate-2"];
-  const blurStyle =
-    "blur-[5px] transition-[filter] duration-[0.3s] ease-[ease-in]";
-  const unblurStyle =
-    "blur-none transition-[filter] duration-[0.3s] ease-[ease-in]";
   return (
-    <AppMotionComponent>
+    <>
       <Carousel
         additionalTransfrom={0}
         arrows
@@ -72,16 +65,12 @@ const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
                 "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800  ring-zinc-900/5  ring-2 ring-offset-2",
                 rotations[index % rotations.length]
               )}>
-              <Image
-                fill
+              <img
                 draggable={false}
-                src={`https:${image?.src as string | StaticImageData}`}
-                alt={image?.alt as string}
+                src={image.src}
+                alt={image.alt}
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className={`absolute h-full w-full object-cover opacity-80 ${
-                  isImageLoading ? blurStyle : unblurStyle
-                }`}
-                onLoad={() => setImageLoading(false)}
+                className="absolute h-full w-full object-cover opacity-80"
               />
             </div>
           </Link>
@@ -94,22 +83,18 @@ const ProjectSlider = ({ projects }: { projects: ProjectEntry[] }) => {
                 "relative aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800  ring-zinc-900/5  ring-2 ring-offset-2",
                 rotations[index % rotations.length]
               )}>
-              <Image
-                fill
+              <img
                 draggable={false}
-                src={`https:${image?.src as string | StaticImageData}`}
-                alt={image?.alt as string}
+                src={image.src}
+                alt={image.alt}
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className={`absolute h-full w-full object-cover opacity-80 ${
-                  isImageLoading ? blurStyle : unblurStyle
-                }`}
-                onLoad={() => setImageLoading(false)}
+                className="absolute h-full w-full object-cover opacity-80"
               />
             </div>
           </Link>
         ))}
       </Carousel>
-    </AppMotionComponent>
+    </>
   );
 };
 

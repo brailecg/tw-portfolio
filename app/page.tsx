@@ -26,7 +26,6 @@ import CaptchaWrapper from "./CaptchaWrapper";
 
 import { getExperiences, getProjects } from "@/contentful/client";
 import { sortExperiences } from "@/util/sortExperience";
-import AppMotionComponent from "./Components/AppMotionComponent";
 
 type Stack = {
   name: string;
@@ -71,9 +70,7 @@ const Experience = async () => {
   return (
     <div className="grid gap-16 ">
       {experienceSummaryData.map((exp, idx) => (
-        <AppMotionComponent
-          key={idx}
-          className="relative flex flex-col gap-4 group z-10">
+        <div key={idx} className="relative flex flex-col gap-4 group z-10">
           <div className="absolute -inset-x-4 -inset-y-6 -z-10 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
           <Link href={"/experience"} className="flex flex-col gap-4 ">
             <p className="flex text-[#71717A] border-l-2 border-l-[#71717A] pl-4 text-sm">
@@ -95,7 +92,7 @@ const Experience = async () => {
             <span> Read Full Job Details</span>
             <RightChevron />
           </Link>
-        </AppMotionComponent>
+        </div>
       ))}
     </div>
   );
@@ -225,7 +222,7 @@ export default async function Home() {
   return (
     <>
       <Container className="">
-        <AppMotionComponent variant="opacityX" className=" max-w-2xl">
+        <div className=" max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl sm:leading-[3.5rem] dark:text-zinc-100">
             Web Developer, aperiodic runner, couch potato.
           </h1>
@@ -258,9 +255,9 @@ export default async function Home() {
               icon={FacebookIcon}
             />
           </div>
-        </AppMotionComponent>
+        </div>
       </Container>
-      <Container>
+      <Container className="">
         <h2 className="mt-6 sm:mt-10 flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <DocumentIcon className="h-6 w-6 flex-none" />
           <span className="ml-3">Learning Initiatives</span>
@@ -277,14 +274,12 @@ export default async function Home() {
             </h2>
             <Experience />
           </div>
-          <AppMotionComponent
-            variant="opacityInX"
-            className="space-y-10 lg:pl-16 xl:pl-24">
+          <div className="space-y-10 lg:pl-16 xl:pl-24">
             <CaptchaWrapper>
               <ContactComponent />
             </CaptchaWrapper>
             <TechStack />
-          </AppMotionComponent>
+          </div>
         </div>
       </Container>
     </>

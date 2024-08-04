@@ -11,7 +11,6 @@ import {
   FacebookIcon,
 } from "@/app/Components/SocialIcons";
 import Link from "next/link";
-import AppMotionComponent from "@/app/Components/AppMotionComponent";
 
 const SocialLink = ({
   text,
@@ -47,7 +46,7 @@ const About = () => {
   return (
     <Container>
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <AppMotionComponent variant="opacityInX" className="lg:pl-20">
+        <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={aboutImage}
@@ -56,10 +55,8 @@ const About = () => {
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
           </div>
-        </AppMotionComponent>
-        <AppMotionComponent
-          variant="opacityX"
-          className="lg:order-first lg:row-span-2">
+        </div>
+        <div className="lg:order-first lg:row-span-2">
           <h1 className=" sm:leading-[3.5rem] text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             Hi, I'm Braile. Read through if you want to know more beyond my
             first name.
@@ -102,8 +99,8 @@ const About = () => {
               .
             </p>
           </div>
-        </AppMotionComponent>
-        <AppMotionComponent variant="opacityInX" className=" lg:pl-20">
+        </div>
+        <div className=" lg:pl-20">
           <div className="mt-6 space-y-4">
             <SocialLink
               href={"https://github.com/brailecg"}
@@ -135,7 +132,7 @@ const About = () => {
               <span className="ml-4">braile.c.gawigawen@gmail.com</span>
             </Link>
           </div>
-        </AppMotionComponent>
+        </div>
       </div>
     </Container>
   );
