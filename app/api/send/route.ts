@@ -11,7 +11,7 @@ async function sendResume(requestorEmail: string) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "Braile Gawigawen <resume@brailegawigawen.dev>",
+      from: "Braile Gawigawen <resume@brailegawigawen.com>",
       to: [requestorEmail],
       subject: "Resume: Braile Gawigawen",
       text: "Hi! Here's a copy of my resume. You can reach out to me at braile.c.gawigawen@gmail.com",
