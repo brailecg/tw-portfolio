@@ -7,6 +7,7 @@ export interface TypeExperiencesFields {
   techStack?: EntryFields.Symbol[];
   summary: EntryFields.Text;
   details: EntryFields.RichText;
+  order: EntryFields.Number;
 }
 
 export interface TypeExpSys {
