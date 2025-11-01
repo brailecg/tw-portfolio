@@ -2,16 +2,6 @@ import Link from "next/link";
 import { Container } from "./Components/Container";
 import Image, { type ImageProps } from "next/image";
 
-import nextIcon from "../public/next-icon.svg";
-import reactIcon from "../public/react-icon.svg";
-import jsIcon from "../public/js-icon.svg";
-import phpIcon from "../public/php-icon.svg";
-import supabaseIcon from "../public/supabase-icon.svg";
-import tailwindIcon from "../public/tailwind-icon.svg";
-import gitIcon from "../public/git-icon.svg";
-import mysqlIcon from "../public/mysql-icon.svg";
-import cssIcon from "../public/css-icon.svg";
-import nodeIcon from "../public/node-icon.svg";
 import {
   GitHubIcon,
   LinkedInIcon,
@@ -24,7 +14,7 @@ import { DocumentIcon, TechIcon, BriefcaseIcon } from "./Components/AppIcons";
 import ContactComponent from "./Components/ContactComponent";
 import CaptchaWrapper from "./CaptchaWrapper";
 
-import { getExperiences, getProjects } from "@/contentful/client";
+import { getExperiences, getProjects, getTechStack } from "@/contentful/client";
 import { sortExperiences } from "@/util/sortExperience";
 
 type Stack = {
@@ -105,6 +95,8 @@ const TechItem = ({ stack }: { stack: Stack }) => {
         <Image
           src={stack.logo}
           alt={stack.name}
+          width={7}
+          height={7}
           className="h-7 w-7 rounded-full"
           unoptimized
         />
@@ -121,60 +113,14 @@ const TechItem = ({ stack }: { stack: Stack }) => {
   );
 };
 
-const TechStack = () => {
-  const techStackList: Array<Stack> = [
-    {
-      name: "NextJs",
-      logo: nextIcon,
-      stackType: "fullstack",
-    },
-    {
-      name: "ReactJs",
-      logo: reactIcon,
-      stackType: "frontend",
-    },
-    {
-      name: "Javascript",
-      logo: jsIcon,
-      stackType: "frontend",
-    },
+const TechStack = async () => {
+  const techStackFromCMS = await getTechStack();
+  const techStackList: Array<Stack> = techStackFromCMS.map((tech) => ({
+    name: tech.fields.techStackName,
+    logo: `https:${tech?.fields?.techStackImage?.fields?.file?.url}`,
+    stackType: tech.fields.techStackType,
+  }));
 
-    {
-      name: "NodeJs",
-      logo: nodeIcon,
-      stackType: "backend",
-    },
-    {
-      name: "PHP",
-      logo: phpIcon,
-      stackType: "backend",
-    },
-    {
-      name: "Supabase",
-      logo: supabaseIcon,
-      stackType: "backend",
-    },
-    {
-      name: "Tailwind",
-      logo: tailwindIcon,
-      stackType: "frontend",
-    },
-    {
-      name: "Git",
-      logo: gitIcon,
-      stackType: "other",
-    },
-    {
-      name: "Mysql",
-      logo: mysqlIcon,
-      stackType: "backend",
-    },
-    {
-      name: "CSS",
-      logo: cssIcon,
-      stackType: "frontend",
-    },
-  ];
   const fullstack = techStackList.filter(
     (item) => item.stackType === "fullstack"
   );

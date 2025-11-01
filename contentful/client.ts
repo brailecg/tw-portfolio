@@ -1,5 +1,10 @@
 import { createClient, EntryCollection } from "contentful";
-import { BlogEntry, ExperienceEntry, ProjectEntry } from "@/types/contentful";
+import {
+  BlogEntry,
+  ExperienceEntry,
+  ProjectEntry,
+  TechStackEntry,
+} from "@/types/contentful";
 
 const client = createClient({
   space: process.env.SPACE_ID as string,
@@ -42,6 +47,20 @@ export const getProjects = async (): Promise<ProjectEntry[]> => {
     return entries.items as unknown as ProjectEntry[];
   } catch (error) {
     console.error("Error retrieving project entries:", error);
+    return [];
+  }
+};
+
+export const getTechStack = async (): Promise<TechStackEntry[]> => {
+  try {
+    const entries: EntryCollection<TechStackEntry> =
+      await client.getEntries<TechStackEntry>({
+        content_type: "techStack",
+      });
+
+    return entries.items as unknown as TechStackEntry[];
+  } catch (error) {
+    console.error("Error retrieving tech stack entries:", error);
     return [];
   }
 };

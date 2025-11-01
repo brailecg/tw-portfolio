@@ -7,14 +7,16 @@ export interface TypeBlogFields {
   summary?: EntryFields.RichText;
   content?: EntryFields.RichText;
   dedicatedImage?: Asset;
+  contentTypeId: string;
 }
+
 export interface TypeBlogSys {
   id: string;
 }
-
 export type BlogEntry = {
   sys: TypeBlogSys;
   fields: TypeBlogFields;
   contentTypeId: string;
 };
+
 export type TypeBlog = Entry<BlogEntry>;

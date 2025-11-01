@@ -1,0 +1,6767 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "blog",
+        "type": "ContentType",
+        "createdAt": "2024-07-11T14:03:12.478Z",
+        "updatedAt": "2024-07-14T12:31:37.539Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-07-14T12:31:37.539Z",
+        "firstPublishedAt": "2024-07-11T14:03:13.013Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/content_types/blog"
+      },
+      "displayField": "title",
+      "name": "Blog",
+      "description": "blog for website portfolio",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "summary",
+          "name": "Summary",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript",
+                "strikethrough"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript",
+                "strikethrough"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "dedicatedImage",
+          "name": "Dedicated Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "experiences",
+        "type": "ContentType",
+        "createdAt": "2024-07-20T08:52:43.417Z",
+        "updatedAt": "2024-07-25T02:24:30.206Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-07-25T02:24:30.206Z",
+        "firstPublishedAt": "2024-07-20T08:52:44.007Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/content_types/experiences"
+      },
+      "displayField": "company",
+      "name": "Experiences",
+      "description": "list of experiences being a developer",
+      "fields": [
+        {
+          "id": "company",
+          "name": "Company",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "employmentDateRange",
+          "name": "Employment Date Range",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "positionTitle",
+          "name": "Position Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "techStack",
+          "name": "Tech Stack",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "summary",
+          "name": "Summary",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "details",
+          "name": "Details",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript",
+                "strikethrough"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "order",
+          "name": "Order",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "projects",
+        "type": "ContentType",
+        "createdAt": "2024-07-20T09:15:30.072Z",
+        "updatedAt": "2024-07-22T07:00:41.334Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-07-22T07:00:41.334Z",
+        "firstPublishedAt": "2024-07-20T09:15:30.495Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/content_types/projects"
+      },
+      "displayField": "name",
+      "name": "Projects",
+      "description": "list of personal projects",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "linksObject",
+          "name": "LinksObject",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "techStack",
+          "name": "Tech Stack",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "personalDetails",
+        "type": "ContentType",
+        "createdAt": "2024-07-28T09:10:29.486Z",
+        "updatedAt": "2025-11-01T00:25:44.509Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-11-01T00:25:44.509Z",
+        "firstPublishedAt": "2024-07-28T09:10:29.896Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/content_types/personalDetails"
+      },
+      "displayField": "homeTitle",
+      "name": "Personal Details",
+      "description": "these texts are used to make the different intros or personal details in my website portfolio dynamic.",
+      "fields": [
+        {
+          "id": "homeTitle",
+          "name": "Home Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "homeIntro",
+          "name": "Home Intro",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "aboutTitle",
+          "name": "About Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "aboutIntro",
+          "name": "About Intro",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "experienceTitle",
+          "name": "Experience Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "experienceIntro",
+          "name": "Experience Intro",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "projectsTitle",
+          "name": "Projects Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "projectsIntro",
+          "name": "Projects Intro",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blogsTitle",
+          "name": "Blogs Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blogsIntro",
+          "name": "Blogs Intro",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "techStack",
+        "type": "ContentType",
+        "createdAt": "2025-11-01T00:30:48.802Z",
+        "updatedAt": "2025-11-01T00:35:34.078Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-11-01T00:35:34.078Z",
+        "firstPublishedAt": "2025-11-01T00:30:49.268Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/content_types/techStack"
+      },
+      "displayField": "techStackName",
+      "name": "TechStack",
+      "description": "list of technologies i currently use",
+      "fields": [
+        {
+          "id": "techStackName",
+          "name": "TechStack Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "techStackImage",
+          "name": "TechStack Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "techStackType",
+          "name": "TechStack Type",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "qix1mezffbig",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-07-11T14:03:13.175Z",
+        "createdBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-07-14T12:31:38.493Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blog",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "summary",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "dedicatedImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "qix1mezffbig",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-07-20T08:52:44.116Z",
+        "createdBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-07-25T02:24:31.070Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "experiences",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "company",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "employmentDateRange",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "positionTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "techStack",
+          "widgetId": "listInput",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "summary",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "details",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "order",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "qix1mezffbig",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-07-20T09:15:30.644Z",
+        "createdBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-07-22T07:00:42.201Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "projects",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linksObject",
+          "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "techStack",
+          "widgetId": "listInput",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "qix1mezffbig",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2024-07-28T09:10:30.050Z",
+        "createdBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-11-01T00:25:45.598Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "personalDetails",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "homeTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "homeIntro",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "aboutTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "aboutIntro",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "experienceTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "experienceIntro",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "projectsTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "projectsIntro",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blogsTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blogsIntro",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "qix1mezffbig",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2025-11-01T00:30:49.378Z",
+        "createdBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-11-01T00:35:35.086Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "techStack",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "techStackName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "techStackImage",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "techStackType",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "3mjrFOMtbXATZCiJMRGhRr",
+        "type": "Entry",
+        "createdAt": "2024-07-13T00:35:21.575Z",
+        "updatedAt": "2024-07-14T12:34:02.348Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 184,
+        "publishedAt": "2024-07-14T12:34:02.348Z",
+        "firstPublishedAt": "2024-07-13T00:43:48.427Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 13,
+        "version": 185,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/3mjrFOMtbXATZCiJMRGhRr"
+      },
+      "fields": {
+        "title": {
+          "en-US": "How I Start a NextJS Project in App Router"
+        },
+        "slug": {
+          "en-US": "how-i-start-a-nextjs-project-using-app-router"
+        },
+        "date": {
+          "en-US": "2024-07-13T00:00+08:00"
+        },
+        "summary": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "A sample way of how to structure the folders of one of my NextJS app. This purely for my reference when doing other similar projects in the future. I'll be building on this article for future changes and/or updates.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "There are two things that I consider when starting a NextJ project. If it's a full fledge application, usually, with authentication, I use the Supabase template.\n\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "npx create-next-app@latest --use-npm supabase-nextjs",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n\nThis provides the suggested way how the supabase integration is structured.\n\nOtherwise, I'll be using the normal template from NextJs.\n\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "npx create-next-app@latest\n\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This makes the initial setup easier, especially with folder structure.\n\nSpeaking about folder structure, I'll be discussing how I started mine for my website portfolio. Given, there's already an initial setup, I will be building on that one. Inside the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "app/",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " directory, i've added a ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Components/",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " folder and a group folder, ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "(pages)/\n\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Inside the Components folder are components shared among different pages, like the Footer and Header. Inside the pages group folder is where I place the different pages of my website. In each webpage, if there are methods or components specific to them, I place them inside the same directory.\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "1iEzGfRmAI7DhZr5yJseF8",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\nAside from components, I also created a folder for ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "util/ ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "for shared methods and ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "types/ ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "for shared types. \n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "2pJHeJc1F2SlgwtJhi6J9D",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\nThe reason behind this folder structure is for developer experience, which boils down to the dev's personal choice. For me, it's for my ease of navigation and for uncluttered look. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "dedicatedImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1iEzGfRmAI7DhZr5yJseF8"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "76emTQ32saQF1lXPKzvbtB",
+        "type": "Entry",
+        "createdAt": "2024-07-16T04:46:02.110Z",
+        "updatedAt": "2024-07-16T06:10:32.806Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 113,
+        "publishedAt": "2024-07-16T06:10:32.806Z",
+        "firstPublishedAt": "2024-07-16T05:04:02.081Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 24,
+        "version": 114,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/76emTQ32saQF1lXPKzvbtB"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Getting Types of Data created in Contentful CMS"
+        },
+        "slug": {
+          "en-US": "getting-types-of-data-created-in-contentful-cms"
+        },
+        "date": {
+          "en-US": "2024-07-16T00:00+08:00"
+        },
+        "summary": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This shows a way on how to get the types of the content model in contenful CMS. This follows a video from Sean Davis with just an added one-liner step at the end.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "This procedure is from Sean Davis’ “",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "data": {
+                      "uri": "https://www.youtube.com/watch?v=TuRpE2sE-P0"
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Generating Typescript Types from Contentful",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "” youtube video. If you follow the steps from the video, you’ll get the expected result as of this writing, July 16, 2024. There’s just an additional step at the end due to changes in Contentful Type, specifically the EntrySkeletonType. Please note I’m doing this using NextJs app router folder structure.\n\nI will be using the Contentful data created for the blog section of my website portfolio. \n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5hmW3sP8hayOlmmX9VZSN8",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\nInstall contentful-cli to export our data from contentful.\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "npm install contentful-cli\n\n",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Add this script to the package.json file. You can call the script however you want, but i’ll just copy the one from the video.\n\n\"cf-export\": \"contentful space export --config contentful/export-config.json --management-token <MANAGEMENT_TOKEN> --space-id <SPACE_ID>“\n\nBefore running the script:",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "ordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "create a contentful folder and inside, create file export-config.json.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Inside the export-config.json file, add these content:",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "{",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\"exportDir\": \"contentful\", // which folder the exported file will be saved\n\n\"contentFile\": \"export.json\", // name of the exported json file\n\n\"downloadAssets\": true // this allows to download\n}\n",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "3. Run the script, ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "npm run cf-export",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\nThis will create the export.json file containing the date of our contentful model. \n\nNext is to install type generator.\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "npm install cf-content-types-generator\n\n",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Add another script in package.json\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "\"cf-generate-types\": \"cf-content-types-generator contentful/export.json --out types/contentful\"\n\n",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "This tells the generator to get the types of the contentful data from export.json and put the result in the folder types/contentful. *If you still don’t have this folder, it will be automatically created for you after you run the script.\n\nRun the script, npm run c-generate-types.\n\nThat’s it! It will generate all the types of your content model.\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "NRgcpJN6rClzqbzJODNWm",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\nIn my case, there was still a type error showing.\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Type 'BlogEntry' does not satisfy the constraint 'EntrySkeletonType'.\nProperty 'contentTypeId' is missing in type 'BlogEntry' but required in type 'EntrySkeletonType'.\n\n",
+                    "marks": [
+                      {
+                        "type": "code"
+                      },
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "To resolve this, just add a contentTypeId: string in the BlogEntry.\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "4NdYwTelPAwbJNXNimpDGc",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "47WSk8NCKE7k3oxo39Mcv1",
+        "type": "Entry",
+        "createdAt": "2024-07-16T06:15:34.644Z",
+        "updatedAt": "2024-07-28T09:04:06.137Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 223,
+        "publishedAt": "2024-07-28T09:04:06.137Z",
+        "firstPublishedAt": "2024-07-25T04:22:53.116Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 224,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/47WSk8NCKE7k3oxo39Mcv1"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Sending Email in React using Resend"
+        },
+        "slug": {
+          "en-US": "sending-email-in-react-using-resend"
+        },
+        "date": {
+          "en-US": "2024-07-16T00:00+08:00"
+        },
+        "summary": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This shows how to send emails using ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://resend.com/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Resend",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ". This does not show how to create an email template, rather, just how to send a simple email with text and attachment.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Reminder that using Resend requires a custom domain. Free tier allows you to add one custom domain.\n\nOnce you're in Resend Dashboard, follow these steps shown in the images below. Be wary of the warning when the API Key has been generated. Save it on your notes, otherwise, you'll have to generate another API Key if you need it again.\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "6Ay0GlVgcEVNgJF9bFal5t",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5ZkzkSITQizdTxNdmV46iZ",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "6GPW3FtXOzqlCrsWLuB0Ih",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\nIn your project, save the API Key in your env.local file. If you don't have an env.local file yet, you can just create one. This is how it will look like. You can retrieve this anywhere in your project using the ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "process.env.<ENV VARIABLE>",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " format.\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "6vPxZr139zDbBKFPBkCgbK",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\n\nInstall resend, \n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "npm install resend\n\n",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "I'll be using the 'Send Resume' form from my portfolio website as an example.\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "1wApd1eHcNacVBrYk0IP5A",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\n\nThe form is for sending my resume to interested recruiters or employers. It has only one input for email. The resume attachment is locally saved in the project in the ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "public/",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " folder.\n\nI have google recaptcha enabled for this form but I will be stripping that off for now, and probably do another article about it.\n\nIn the form action, pass the method that handles the calling of the send api. Here is  the ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "sendResume",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " method.\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "2v9OxL8DQKIPAtEETH6ARo",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\n\nThe ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "formData",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " props is what gets passed from the form action. You can get the value of the form input using the ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "formData.get(\"nameOfInput\")",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " method.\n\nSince I'm already using NextJs 14, I've created the api endpoint using the ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "api/",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " folder, and the endpoint method is going to be a ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "POST.",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "\n\nBased on the code snippet from the image:\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "3NsDf0CgM6aRV0DCwRP1N0",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\n\nLine 1 is a Node import for getting file from the public folder. Line 2 is for encoding the file to base64 since that's the required format for an attachment. Line 3 is just importing Resend. Line 4 creates a Resend instance using the API Key that was generated earlier.\n\nLines 12 to 23 is the format on how to send your email using Resend. The custom domain is placed in the ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "from",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " key. If you still don't have a custom domain, you can you use Resend's ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "resend.dev ",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "domain. ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "This domain is only allowed in the development environment. Using it in prod may suspend your account.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " \n\nFrom here, you can check the response data and can return it or however you want to use it.\n\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "33wE1rgWMCv5DMkH9JCjEd",
+        "type": "Entry",
+        "createdAt": "2024-07-20T08:52:58.552Z",
+        "updatedAt": "2024-07-25T02:25:01.529Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 21,
+        "publishedAt": "2024-07-25T02:25:01.529Z",
+        "firstPublishedAt": "2024-07-20T08:56:01.265Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 22,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experiences"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/33wE1rgWMCv5DMkH9JCjEd"
+      },
+      "fields": {
+        "company": {
+          "en-US": "Resource Box Int'l"
+        },
+        "employmentDateRange": {
+          "en-US": "January 2018 - August 2021"
+        },
+        "positionTitle": {
+          "en-US": "Web Developer"
+        },
+        "techStack": {
+          "en-US": [
+            "PHP",
+            "Javascript",
+            "JQuery",
+            "MySql",
+            "RESTful",
+            "Boostsrap",
+            "Git"
+          ]
+        },
+        "summary": {
+          "en-US": "My first job as a developer. I was hired as part of a team maintaining legacy systems and creating internal web apps for other departments"
+        },
+        "details": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Pricing Portal",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " - ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Built a ticketing web app used by our Pricing Dept and Sales team for negotiating better pricing for customers.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Customer Registration Portal - ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Built a web app for our compliance department to register a customer who has submitted complete requirements for them to access our customer ordering portal and formulary.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Supply Chain Management Portal - ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Built a ticketing web app for our Supply Chain department and Pricing department for negotiating better supplier pricing.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "order": {
+          "en-US": 2
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "6OKIu6IHrS9fq0sRhZZKk0",
+        "type": "Entry",
+        "createdAt": "2024-07-20T08:56:15.366Z",
+        "updatedAt": "2024-07-25T02:25:13.935Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 22,
+        "publishedAt": "2024-07-25T02:25:13.935Z",
+        "firstPublishedAt": "2024-07-20T08:59:14.663Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 23,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experiences"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/6OKIu6IHrS9fq0sRhZZKk0"
+      },
+      "fields": {
+        "company": {
+          "en-US": "Morivy Data and Technologies"
+        },
+        "employmentDateRange": {
+          "en-US": "November 2021 - June 2022"
+        },
+        "positionTitle": {
+          "en-US": "Junior Frontend Developer"
+        },
+        "techStack": {
+          "en-US": [
+            "ReactJs",
+            "NextJs",
+            "MySql",
+            "Git",
+            "TailwindCss"
+          ]
+        },
+        "summary": {
+          "en-US": "This is a startup. I was hired as a developer focused on frontend development."
+        },
+        "details": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "B",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "ookkeeping App - ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Assigned as a frontend dev for a web app for customers to upload payments they made for services provided by company.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Dashboard Pages - ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Assigned as a frontend dev for the dashboard pages for the company services using Ant Design Charts.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "order": {
+          "en-US": 3
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "1VDQll3ujQWzsQRvr57x3s",
+        "type": "Entry",
+        "createdAt": "2024-07-20T08:59:36.866Z",
+        "updatedAt": "2024-07-25T03:00:55.600Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2024-07-25T03:00:55.600Z",
+        "firstPublishedAt": "2024-07-20T09:01:39.467Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experiences"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/1VDQll3ujQWzsQRvr57x3s"
+      },
+      "fields": {
+        "company": {
+          "en-US": "Accenture PH"
+        },
+        "employmentDateRange": {
+          "en-US": "June 2022 - April 2024"
+        },
+        "positionTitle": {
+          "en-US": "Application Development Team Lead"
+        },
+        "techStack": {
+          "en-US": [
+            "JavaScript",
+            "Apex",
+            "RESTful",
+            "Salesforce Object Query Language (SOQL)",
+            "Git"
+          ]
+        },
+        "summary": {
+          "en-US": "I was part of the Salesforce team where I was involved in two projects. As a javascript developer for a government website and a team lead for the integration team for an insurance company"
+        },
+        "details": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "W",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "eb Survey - ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Using Salesforce Marketing Cloud, created a web survey for select pages on client's website using pure javascript.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Recommendation Section - ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Using Salesforce Einstein recommendation, built, using javascript , a section on the client's website where users can see recommended services and/or products based on their history.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Data Integration - ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Assigned as developer and lead of the integration team to build the correct data from salesforce that will be sent to client's insurance web app using Apex.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "order": {
+          "en-US": 4
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "5Emi0DZhbCxxuyVrivc4Nl",
+        "type": "Entry",
+        "createdAt": "2024-07-20T09:16:45.522Z",
+        "updatedAt": "2024-07-22T07:05:15.862Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 22,
+        "publishedAt": "2024-07-22T07:05:15.862Z",
+        "firstPublishedAt": "2024-07-20T09:20:29.242Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 23,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/5Emi0DZhbCxxuyVrivc4Nl"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Kanban App"
+        },
+        "description": {
+          "en-US": "A web app used for personal project management."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5TKyKNwv9UssqhJEF1ZXGf"
+            }
+          }
+        },
+        "linksObject": {
+          "en-US": [
+            {
+              "appLink": "https://fm-kanban-psi.vercel.app/auth",
+              "linkName": "Kanban.app",
+              "githubLink": "https://github.com/brailecg/fm-kanban"
+            }
+          ]
+        },
+        "techStack": {
+          "en-US": [
+            "NextJs",
+            "Tailwind",
+            "Supabase",
+            "React Hook Form",
+            "Zod",
+            "Dnd Kit"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "4kyyVNUhixq7ZSUlvbpVLV",
+        "type": "Entry",
+        "createdAt": "2024-07-20T09:21:22.549Z",
+        "updatedAt": "2024-07-22T07:03:59.383Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2024-07-22T07:03:59.383Z",
+        "firstPublishedAt": "2024-07-20T09:22:47.182Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/4kyyVNUhixq7ZSUlvbpVLV"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Link Sharing App"
+        },
+        "description": {
+          "en-US": "A web app used for building a sharable social links."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2EZeRKkg3HMJTTWRqXRL0E"
+            }
+          }
+        },
+        "linksObject": {
+          "en-US": [
+            {
+              "appLink": "https://fm-link-sharing-app-two.vercel.app/login",
+              "linkName": "LinkSharing.app",
+              "githubLink": "https://github.com/brailecg/fm-link-sharing-app"
+            }
+          ]
+        },
+        "techStack": {
+          "en-US": [
+            "NextJs",
+            "TailwindCss",
+            "Zustand",
+            "Zod",
+            "React Hook Form",
+            "Supabase"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "1QHUNrKo8VAjpBTePALGtX",
+        "type": "Entry",
+        "createdAt": "2024-07-20T09:22:53.731Z",
+        "updatedAt": "2024-07-22T07:02:37.642Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2024-07-22T07:02:37.642Z",
+        "firstPublishedAt": "2024-07-20T09:24:09.613Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/1QHUNrKo8VAjpBTePALGtX"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Simple Dictionary App"
+        },
+        "description": {
+          "en-US": "A basic dictionary web app using API for resources."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3VN1ADByMkZJtnTjnYOKT7"
+            }
+          }
+        },
+        "linksObject": {
+          "en-US": [
+            {
+              "appLink": "https://fm-dictionary.vercel.app/",
+              "linkName": "Dictionary.app",
+              "githubLink": "https://github.com/brailecg/fm-dictionary"
+            }
+          ]
+        },
+        "techStack": {
+          "en-US": [
+            "NextJs",
+            "ReactJs",
+            "TailwindCss"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "5m7uO0AxeVYlpAxJkqrwrb",
+        "type": "Entry",
+        "createdAt": "2024-07-25T02:04:28.116Z",
+        "updatedAt": "2024-07-25T03:04:21.849Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2024-07-25T03:04:21.849Z",
+        "firstPublishedAt": "2024-07-25T02:07:41.434Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experiences"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/5m7uO0AxeVYlpAxJkqrwrb"
+      },
+      "fields": {
+        "company": {
+          "en-US": "Customer Support"
+        },
+        "employmentDateRange": {
+          "en-US": "Previous Experiences"
+        },
+        "positionTitle": {
+          "en-US": "Customer Support"
+        },
+        "techStack": {
+          "en-US": [
+            "N/A"
+          ]
+        },
+        "summary": {
+          "en-US": "I was part of the customer service industry for a little over three years."
+        },
+        "details": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "  ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "order": {
+          "en-US": 1
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "71yU42WqgqxkpI5bIuQsx3",
+        "type": "Entry",
+        "createdAt": "2024-07-28T09:10:37.606Z",
+        "updatedAt": "2024-07-28T13:51:52.558Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2024-07-28T13:51:52.558Z",
+        "firstPublishedAt": "2024-07-28T13:51:52.558Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "personalDetails"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/71yU42WqgqxkpI5bIuQsx3"
+      },
+      "fields": {
+        "homeTitle": {
+          "en-US": "Web Developer, aperiodic runner, couch potato."
+        },
+        "homeIntro": {
+          "en-US": "Hello! I’m Braile,  a web developer who has a knack in creating dynamic, user-friendly websites and web apps. I specialize in using Javscript, while leveraging libraries and frameworks like Reactjs, NextJs, and Tailwind Css, together with NodeJs to build responsive and intuitive applications. "
+        },
+        "aboutTitle": {
+          "en-US": "Hi, I'm Braile. Read through if you want to know more beyond my first name."
+        },
+        "aboutIntro": {
+          "en-US": "I took engineering when I was in college. I thought pursuing it as a career was the best and only option after graduation. Unfortunately, there were limited to no opportunities for a non-licensed fresh grad.\n\nI eventually applied for a customer service job, stayed there for two years, applied for another one which lasted for a year and half. I can definitely attribute from these experiences my improvement when dealing and communicating with others, from colleagues to random acquaintances I encounter.\n\nWhile working these jobs is where I met people from the IT industry. Working with them piqued my interest in pursuing a career in the field, but given my non-existent savings at the time, I can't afford to go back to school nor to quit my job and try my luck. I can't just apply as someone with no experience. Good thing my masters in Google search led me to a bootcamp for web developers.\n\nI applied (yes, you have to apply to get in) and was granted entry. Also, I was able to get in cause they have a payment plan that works for someone like me. I worked while attending bootcamp, summing an 18-hour waking period for most of my weekdays for three months. I'd say it was worth it.\n\nThe rest, you can check my work experiences [here](https://www.brailegawigawen.dev/experience)."
+        },
+        "experienceTitle": {
+          "en-US": "Switching Gears! From customer service to web development."
+        },
+        "experienceIntro": {
+          "en-US": "I started out as a part of the customer service industry not knowing when I did my career shift as a web developer, i'll still be doing the same... and more?? 😑\n\nInstead of customers over the phone, I speak with Project Managers, Operations Managers, and sometimes the clients directly. With the added complexity of coding. No complaints here though since I enjoy every minute of it. 😎\n"
+        },
+        "projectsTitle": {
+          "en-US": "List of personal projects I've been working on."
+        },
+        "projectsIntro": {
+          "en-US": "I've been trying to better myself by building more personal projects focused on making figma designs full-fledged apps. [Frontend Mentor](https://www.frontendmentor.io) has been my go-to for projects that I can build for upskilling. Here are some of them."
+        },
+        "blogsTitle": {
+          "en-US": "Writing about anything Web Development and then some."
+        },
+        "blogsIntro": {
+          "en-US": "These are mostly topics/concepts that are new to me that I don't want to forget about. These are more guidelines than articles. There's no writing structure, just writing how I came to do things.\n\nAlso, each blog content came from [Contentful CMS](https://www.contentful.com/), so the look of each entry might change as I go along.\n"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "3fGSuA8dUnUJeTfNVUyqwu",
+        "type": "Entry",
+        "createdAt": "2025-11-01T00:18:40.808Z",
+        "updatedAt": "2025-11-01T00:23:12.526Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2025-11-01T00:23:12.526Z",
+        "firstPublishedAt": "2025-11-01T00:23:12.526Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experiences"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/3fGSuA8dUnUJeTfNVUyqwu"
+      },
+      "fields": {
+        "company": {
+          "en-US": "TeemCorp Staff Solutions"
+        },
+        "employmentDateRange": {
+          "en-US": "October 2024 - Present"
+        },
+        "positionTitle": {
+          "en-US": "Web Developer"
+        },
+        "techStack": {
+          "en-US": [
+            "ReactJS",
+            "Redux",
+            "Tailwind",
+            "Electron",
+            "ExpressJS",
+            "MYSQL",
+            "RESTful",
+            "JIRA",
+            "Git",
+            "PHP",
+            "Python"
+          ]
+        },
+        "summary": {
+          "en-US": "I am a developer and support for an Australian IT Solutions company."
+        },
+        "details": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Lead Wash ",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "- Feature to clean a list of phone numbers by integrating with DNCR (Do Not Call Register) to",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "make sure leads are allowed to be called.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Electron Dialer App ",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "- A dialer built on electron that can make and receive calls, make transfer calls, save",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "contacts and call history. The dialer functionality is built on SIP.js",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "SMS Feature ",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "- Send SMS in the portal and in the Electron dialer app by integrating with a third party provider.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "order": {
+          "en-US": 5
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "1sxU5EZr2xa38OdXUpJXg4",
+        "type": "Entry",
+        "createdAt": "2025-11-01T00:32:26.209Z",
+        "updatedAt": "2025-11-01T00:45:36.347Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-11-01T00:45:36.347Z",
+        "firstPublishedAt": "2025-11-01T00:45:36.347Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "techStack"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/entries/1sxU5EZr2xa38OdXUpJXg4"
+      },
+      "fields": {
+        "techStackName": {
+          "en-US": "NextJS"
+        },
+        "techStackImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "70tjjgcdc8qU6VoXHaL9kq"
+            }
+          }
+        },
+        "techStackType": {
+          "en-US": "full"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "3TfFhEDDMPY5IJEkuXOBih",
+        "type": "Asset",
+        "createdAt": "2024-07-13T01:35:28.302Z",
+        "updatedAt": "2024-07-13T01:57:21.440Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-07-13T01:57:21.440Z",
+        "firstPublishedAt": "2024-07-13T01:36:51.719Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/3TfFhEDDMPY5IJEkuXOBih"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Folder Structure"
+        },
+        "description": {
+          "en-US": "image of a sample folder structure"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/3TfFhEDDMPY5IJEkuXOBih/f9cc6bc9c318ebe1a5be953a2f01d92a/folder-structure-1.png",
+            "details": {
+              "size": 25340,
+              "image": {
+                "width": 272,
+                "height": 400
+              }
+            },
+            "fileName": "folder-structure-1.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "1iEzGfRmAI7DhZr5yJseF8",
+        "type": "Asset",
+        "createdAt": "2024-07-13T02:19:02.041Z",
+        "updatedAt": "2024-07-13T02:19:47.048Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-07-13T02:19:47.048Z",
+        "firstPublishedAt": "2024-07-13T02:19:47.048Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/1iEzGfRmAI7DhZr5yJseF8"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Folder Structure 2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/1iEzGfRmAI7DhZr5yJseF8/feb3960dd444b9f812f62bde6826e807/folder-structure-2.png",
+            "details": {
+              "size": 25412,
+              "image": {
+                "width": 279,
+                "height": 400
+              }
+            },
+            "fileName": "folder-structure-2.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "2pJHeJc1F2SlgwtJhi6J9D",
+        "type": "Asset",
+        "createdAt": "2024-07-13T02:19:51.468Z",
+        "updatedAt": "2024-07-13T02:26:53.901Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-07-13T02:26:53.901Z",
+        "firstPublishedAt": "2024-07-13T02:20:18.199Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/2pJHeJc1F2SlgwtJhi6J9D"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Folder Structure 3"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/2pJHeJc1F2SlgwtJhi6J9D/e44aab72f95cacafc44df29ecaa3bc42/folder-structure-3.png",
+            "details": {
+              "size": 10699,
+              "image": {
+                "width": 280,
+                "height": 144
+              }
+            },
+            "fileName": "folder-structure-3.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "5YcyanPbobbwfv8xNCkyHN",
+        "type": "Asset",
+        "createdAt": "2024-07-13T12:55:31.695Z",
+        "updatedAt": "2024-07-13T12:55:51.467Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-07-13T12:55:51.467Z",
+        "firstPublishedAt": "2024-07-13T12:55:51.467Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/5YcyanPbobbwfv8xNCkyHN"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Resume"
+        },
+        "file": {
+          "en-US": {
+            "url": "//assets.ctfassets.net/qix1mezffbig/5YcyanPbobbwfv8xNCkyHN/5de57d363bdc291c3659cc417dcf8aea/Braile_Gawigawen.pdf",
+            "details": {
+              "size": 74776
+            },
+            "fileName": "Braile Gawigawen.pdf",
+            "contentType": "application/pdf"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "4NdYwTelPAwbJNXNimpDGc",
+        "type": "Asset",
+        "createdAt": "2024-07-16T04:57:12.895Z",
+        "updatedAt": "2024-07-16T06:14:15.937Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-07-16T06:14:15.937Z",
+        "firstPublishedAt": "2024-07-16T05:03:48.141Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/4NdYwTelPAwbJNXNimpDGc"
+      },
+      "fields": {
+        "title": {
+          "en-US": "type-with-no-error"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/4NdYwTelPAwbJNXNimpDGc/88232cedd60c7a8bf792af983d7ac261/type-with-no-error.png",
+            "details": {
+              "size": 11712,
+              "image": {
+                "width": 300,
+                "height": 106
+              }
+            },
+            "fileName": "type-with-no-error.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "5hmW3sP8hayOlmmX9VZSN8",
+        "type": "Asset",
+        "createdAt": "2024-07-16T04:57:12.954Z",
+        "updatedAt": "2024-07-16T05:03:48.136Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-16T05:03:48.136Z",
+        "firstPublishedAt": "2024-07-16T05:03:48.136Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/5hmW3sP8hayOlmmX9VZSN8"
+      },
+      "fields": {
+        "title": {
+          "en-US": "content-model"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/5hmW3sP8hayOlmmX9VZSN8/cae47ace8ba8e0a48b8d890d229f6eab/content-model.png",
+            "details": {
+              "size": 161962,
+              "image": {
+                "width": 2398,
+                "height": 816
+              }
+            },
+            "fileName": "content-model.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "NRgcpJN6rClzqbzJODNWm",
+        "type": "Asset",
+        "createdAt": "2024-07-16T04:57:12.966Z",
+        "updatedAt": "2024-07-16T06:14:52.447Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-07-16T06:14:52.447Z",
+        "firstPublishedAt": "2024-07-16T05:03:48.139Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/NRgcpJN6rClzqbzJODNWm"
+      },
+      "fields": {
+        "title": {
+          "en-US": "type-with-error"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/NRgcpJN6rClzqbzJODNWm/6c4d5782bcccc09bee781888656a56a0/type-with-error.png",
+            "details": {
+              "size": 83865,
+              "image": {
+                "width": 700,
+                "height": 482
+              }
+            },
+            "fileName": "type-with-error.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "3VN1ADByMkZJtnTjnYOKT7",
+        "type": "Asset",
+        "createdAt": "2024-07-20T09:18:40.909Z",
+        "updatedAt": "2024-07-20T09:19:10.340Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-20T09:19:10.340Z",
+        "firstPublishedAt": "2024-07-20T09:19:10.340Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/3VN1ADByMkZJtnTjnYOKT7"
+      },
+      "fields": {
+        "title": {
+          "en-US": "dictionary-image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/3VN1ADByMkZJtnTjnYOKT7/b6a75ec7a0643b7005e4f834974db945/dictionary-image.png",
+            "details": {
+              "size": 112490,
+              "image": {
+                "width": 1022,
+                "height": 732
+              }
+            },
+            "fileName": "dictionary-image.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "2EZeRKkg3HMJTTWRqXRL0E",
+        "type": "Asset",
+        "createdAt": "2024-07-20T09:18:40.922Z",
+        "updatedAt": "2024-07-20T09:19:10.342Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-20T09:19:10.342Z",
+        "firstPublishedAt": "2024-07-20T09:19:10.342Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/2EZeRKkg3HMJTTWRqXRL0E"
+      },
+      "fields": {
+        "title": {
+          "en-US": "devlink-image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/2EZeRKkg3HMJTTWRqXRL0E/04e87b7ecfa75f0a310b6c38ce6cd05f/devlink-image.png",
+            "details": {
+              "size": 78298,
+              "image": {
+                "width": 1022,
+                "height": 732
+              }
+            },
+            "fileName": "devlink-image.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "5TKyKNwv9UssqhJEF1ZXGf",
+        "type": "Asset",
+        "createdAt": "2024-07-20T09:18:40.935Z",
+        "updatedAt": "2024-07-20T09:19:10.345Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-20T09:19:10.345Z",
+        "firstPublishedAt": "2024-07-20T09:19:10.345Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/5TKyKNwv9UssqhJEF1ZXGf"
+      },
+      "fields": {
+        "title": {
+          "en-US": "kanban-image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/5TKyKNwv9UssqhJEF1ZXGf/1ff2950fa2652ee5a1b6f4cb1d388516/kanban-image.png",
+            "details": {
+              "size": 54330,
+              "image": {
+                "width": 1022,
+                "height": 732
+              }
+            },
+            "fileName": "kanban-image.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "6Ay0GlVgcEVNgJF9bFal5t",
+        "type": "Asset",
+        "createdAt": "2024-07-25T03:32:47.799Z",
+        "updatedAt": "2024-07-25T03:33:46.632Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-25T03:33:46.632Z",
+        "firstPublishedAt": "2024-07-25T03:33:46.632Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/6Ay0GlVgcEVNgJF9bFal5t"
+      },
+      "fields": {
+        "title": {
+          "en-US": "resend-1"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/6Ay0GlVgcEVNgJF9bFal5t/e035e4c198c6df08dd70b02028c24269/resend-1.png",
+            "details": {
+              "size": 52936,
+              "image": {
+                "width": 1590,
+                "height": 370
+              }
+            },
+            "fileName": "resend-1.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "6GPW3FtXOzqlCrsWLuB0Ih",
+        "type": "Asset",
+        "createdAt": "2024-07-25T03:32:47.804Z",
+        "updatedAt": "2024-07-25T03:33:46.547Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-25T03:33:46.547Z",
+        "firstPublishedAt": "2024-07-25T03:33:46.547Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/6GPW3FtXOzqlCrsWLuB0Ih"
+      },
+      "fields": {
+        "title": {
+          "en-US": "resend-3"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/6GPW3FtXOzqlCrsWLuB0Ih/8b39c74630ec91152980a1ac838519f4/resend-3.png",
+            "details": {
+              "size": 23688,
+              "image": {
+                "width": 458,
+                "height": 280
+              }
+            },
+            "fileName": "resend-3.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "5ZkzkSITQizdTxNdmV46iZ",
+        "type": "Asset",
+        "createdAt": "2024-07-25T03:32:47.810Z",
+        "updatedAt": "2024-07-25T03:33:46.539Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-25T03:33:46.539Z",
+        "firstPublishedAt": "2024-07-25T03:33:46.539Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/5ZkzkSITQizdTxNdmV46iZ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "resend-2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/5ZkzkSITQizdTxNdmV46iZ/897952761229e9b7e4fe4c61b86a2522/resend-2.png",
+            "details": {
+              "size": 23485,
+              "image": {
+                "width": 528,
+                "height": 400
+              }
+            },
+            "fileName": "resend-2.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "1wApd1eHcNacVBrYk0IP5A",
+        "type": "Asset",
+        "createdAt": "2024-07-25T04:21:05.962Z",
+        "updatedAt": "2024-07-25T04:21:28.377Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-25T04:21:28.377Z",
+        "firstPublishedAt": "2024-07-25T04:21:28.377Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/1wApd1eHcNacVBrYk0IP5A"
+      },
+      "fields": {
+        "title": {
+          "en-US": "resend-4"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/1wApd1eHcNacVBrYk0IP5A/3cdbcac1851707d317ffaaf2bfc29389/resend-4.png",
+            "details": {
+              "size": 20041,
+              "image": {
+                "width": 431,
+                "height": 253
+              }
+            },
+            "fileName": "resend-4.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "6vPxZr139zDbBKFPBkCgbK",
+        "type": "Asset",
+        "createdAt": "2024-07-25T04:21:05.965Z",
+        "updatedAt": "2024-07-25T04:21:28.312Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-25T04:21:28.312Z",
+        "firstPublishedAt": "2024-07-25T04:21:28.312Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/6vPxZr139zDbBKFPBkCgbK"
+      },
+      "fields": {
+        "title": {
+          "en-US": "resend-7"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/6vPxZr139zDbBKFPBkCgbK/b05e5b13e21072cddcc55631765739b7/resend-7.png",
+            "details": {
+              "size": 20311,
+              "image": {
+                "width": 930,
+                "height": 148
+              }
+            },
+            "fileName": "resend-7.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "3NsDf0CgM6aRV0DCwRP1N0",
+        "type": "Asset",
+        "createdAt": "2024-07-25T04:21:05.980Z",
+        "updatedAt": "2024-07-25T04:21:28.371Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-25T04:21:28.371Z",
+        "firstPublishedAt": "2024-07-25T04:21:28.371Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/3NsDf0CgM6aRV0DCwRP1N0"
+      },
+      "fields": {
+        "title": {
+          "en-US": "resend-6"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/3NsDf0CgM6aRV0DCwRP1N0/3ac66ec071a03608cdfb5327b7a8b44b/resend-6.png",
+            "details": {
+              "size": 274649,
+              "image": {
+                "width": 1002,
+                "height": 1246
+              }
+            },
+            "fileName": "resend-6.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "2v9OxL8DQKIPAtEETH6ARo",
+        "type": "Asset",
+        "createdAt": "2024-07-25T04:21:05.995Z",
+        "updatedAt": "2024-07-25T04:21:28.382Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-07-25T04:21:28.382Z",
+        "firstPublishedAt": "2024-07-25T04:21:28.382Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/2v9OxL8DQKIPAtEETH6ARo"
+      },
+      "fields": {
+        "title": {
+          "en-US": "resend-5"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/2v9OxL8DQKIPAtEETH6ARo/41f0941459e993973289f365fdf011ec/resend-5.png",
+            "details": {
+              "size": 107232,
+              "image": {
+                "width": 1098,
+                "height": 516
+              }
+            },
+            "fileName": "resend-5.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "70tjjgcdc8qU6VoXHaL9kq",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:35:51.471Z",
+        "updatedAt": "2025-11-01T00:38:17.640Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2025-11-01T00:38:17.640Z",
+        "firstPublishedAt": "2025-11-01T00:36:51.724Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/70tjjgcdc8qU6VoXHaL9kq"
+      },
+      "fields": {
+        "title": {
+          "en-US": "nextjs-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/70tjjgcdc8qU6VoXHaL9kq/da64c84fa34bfa3dc41692a58c8477b4/next-icon.svg",
+            "details": {
+              "size": 2187,
+              "image": {
+                "width": 24,
+                "height": 24
+              }
+            },
+            "fileName": "next-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "RJYwH1hfdSfU0CBRPtXOF",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:37:49.590Z",
+        "updatedAt": "2025-11-01T00:38:45.581Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:38:45.581Z",
+        "firstPublishedAt": "2025-11-01T00:38:45.581Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/RJYwH1hfdSfU0CBRPtXOF"
+      },
+      "fields": {
+        "title": {
+          "en-US": "git-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/RJYwH1hfdSfU0CBRPtXOF/63f0268e8bebf2baf335e252ec7badcf/git-icon.svg",
+            "details": {
+              "size": 62443,
+              "image": {
+                "width": 120,
+                "height": 120
+              }
+            },
+            "fileName": "git-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "33CaHUMfezhp5ggmg5KhOh",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:37:49.602Z",
+        "updatedAt": "2025-11-01T00:38:45.576Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:38:45.576Z",
+        "firstPublishedAt": "2025-11-01T00:38:45.576Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/33CaHUMfezhp5ggmg5KhOh"
+      },
+      "fields": {
+        "title": {
+          "en-US": "node-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/33CaHUMfezhp5ggmg5KhOh/5ba1e27d01910492819058ede22bc984/node-icon.svg",
+            "details": {
+              "size": 63385,
+              "image": {
+                "width": 120,
+                "height": 120
+              }
+            },
+            "fileName": "node-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "4EqOlG06R9keXOi1JV0QYU",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:37:49.605Z",
+        "updatedAt": "2025-11-01T00:38:45.571Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:38:45.571Z",
+        "firstPublishedAt": "2025-11-01T00:38:45.571Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/4EqOlG06R9keXOi1JV0QYU"
+      },
+      "fields": {
+        "title": {
+          "en-US": "php-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/4EqOlG06R9keXOi1JV0QYU/ab9270a5d94c5f7431e2286453e04df0/php-icon.svg",
+            "details": {
+              "size": 296775,
+              "image": {
+                "width": 120,
+                "height": 120
+              }
+            },
+            "fileName": "php-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "MuAgrbcNaerTtW1wgDROh",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:37:49.613Z",
+        "updatedAt": "2025-11-01T00:38:45.578Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:38:45.578Z",
+        "firstPublishedAt": "2025-11-01T00:38:45.578Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/MuAgrbcNaerTtW1wgDROh"
+      },
+      "fields": {
+        "title": {
+          "en-US": "mysql-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/MuAgrbcNaerTtW1wgDROh/d1fb0fb2cd68efa654198c2582273e0c/mysql-icon.svg",
+            "details": {
+              "size": 212459,
+              "image": {
+                "width": 120,
+                "height": 120
+              }
+            },
+            "fileName": "mysql-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "6EumXnsEKTdqEB1u0ZMoRc",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:37:49.614Z",
+        "updatedAt": "2025-11-01T00:38:45.569Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:38:45.569Z",
+        "firstPublishedAt": "2025-11-01T00:38:45.569Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/6EumXnsEKTdqEB1u0ZMoRc"
+      },
+      "fields": {
+        "title": {
+          "en-US": "js-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/6EumXnsEKTdqEB1u0ZMoRc/6eb4297160bba70d7e99f7fe36f1d2c8/js-icon.svg",
+            "details": {
+              "size": 156099,
+              "image": {
+                "width": 120,
+                "height": 120
+              }
+            },
+            "fileName": "js-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "7GcsVWBzZH1b4vjCTt04ah",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:37:49.619Z",
+        "updatedAt": "2025-11-01T00:38:45.574Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:38:45.574Z",
+        "firstPublishedAt": "2025-11-01T00:38:45.574Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/7GcsVWBzZH1b4vjCTt04ah"
+      },
+      "fields": {
+        "title": {
+          "en-US": "css-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/7GcsVWBzZH1b4vjCTt04ah/b1821be661a6cf104c255879a7dfd8eb/css-icon.svg",
+            "details": {
+              "size": 79648,
+              "image": {
+                "width": 120,
+                "height": 120
+              }
+            },
+            "fileName": "css-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "2shcsVZAfDHqkT1oJmPB7U",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:37:50.594Z",
+        "updatedAt": "2025-11-01T00:38:45.563Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:38:45.563Z",
+        "firstPublishedAt": "2025-11-01T00:38:45.563Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/2shcsVZAfDHqkT1oJmPB7U"
+      },
+      "fields": {
+        "title": {
+          "en-US": "supabase-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/2shcsVZAfDHqkT1oJmPB7U/57459f28f890176d2b03168d252e7a79/supabase-icon.svg",
+            "details": {
+              "size": 30611,
+              "image": {
+                "width": 120,
+                "height": 123
+              }
+            },
+            "fileName": "supabase-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "4JsELxdPfDV6Rz1bXf5n4m",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:37:50.600Z",
+        "updatedAt": "2025-11-01T00:38:45.566Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:38:45.566Z",
+        "firstPublishedAt": "2025-11-01T00:38:45.566Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/4JsELxdPfDV6Rz1bXf5n4m"
+      },
+      "fields": {
+        "title": {
+          "en-US": "react-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/4JsELxdPfDV6Rz1bXf5n4m/46037e2aa63ca5ee24fae2b6533e8ed1/react-icon.svg",
+            "details": {
+              "size": 54880,
+              "image": {
+                "width": 120,
+                "height": 120
+              }
+            },
+            "fileName": "react-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "BjpYgOrQJ2ZW6IuDIdXqX",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:37:50.607Z",
+        "updatedAt": "2025-11-01T00:38:45.561Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:38:45.561Z",
+        "firstPublishedAt": "2025-11-01T00:38:45.561Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/BjpYgOrQJ2ZW6IuDIdXqX"
+      },
+      "fields": {
+        "title": {
+          "en-US": "tailwind-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/BjpYgOrQJ2ZW6IuDIdXqX/c16d6cca3476c4ac74dbc2ce574fc07b/tailwind-icon.svg",
+            "details": {
+              "size": 44633,
+              "image": {
+                "width": 120,
+                "height": 120
+              }
+            },
+            "fileName": "tailwind-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "3IuWzN219o8wA6exZLVIav",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:44:44.287Z",
+        "updatedAt": "2025-11-01T00:45:02.199Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:45:02.199Z",
+        "firstPublishedAt": "2025-11-01T00:45:02.199Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/3IuWzN219o8wA6exZLVIav"
+      },
+      "fields": {
+        "title": {
+          "en-US": "electronjs-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/3IuWzN219o8wA6exZLVIav/74d86bec7f9bd8c0311294ef793bedb6/electronjs-icon.svg",
+            "details": {
+              "size": 2440,
+              "image": {
+                "width": 256,
+                "height": 256
+              }
+            },
+            "fileName": "electronjs-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "id": "5X7sR5fe2YuWZ4HC24SG9H",
+        "type": "Asset",
+        "createdAt": "2025-11-01T00:44:44.325Z",
+        "updatedAt": "2025-11-01T00:45:02.202Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2025-11-01T00:45:02.202Z",
+        "firstPublishedAt": "2025-11-01T00:45:02.202Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/qix1mezffbig/environments/master/assets/5X7sR5fe2YuWZ4HC24SG9H"
+      },
+      "fields": {
+        "title": {
+          "en-US": "redux-icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/qix1mezffbig/5X7sR5fe2YuWZ4HC24SG9H/99a94c5153c6c46e6c72ae81c2ddb832/redux-icon.svg",
+            "details": {
+              "size": 1463,
+              "image": {
+                "width": 120,
+                "height": 120
+              }
+            },
+            "fileName": "redux-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "2uQT0Xx7I0MP4ytIbGPCgQ",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "c872c3d2-47e7-45f1-945d-1731eda06617"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "createdAt": "2024-07-01T03:52:54Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedAt": "2024-07-01T03:52:54Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2vcY9a97RrtYAzpWa6e14E",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "createdAt": "2024-07-01T03:52:55Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedAt": "2024-07-01T03:52:55Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2vdkaiSO6HRK1zmJJBTwxu",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "createdAt": "2024-07-01T03:52:55Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedAt": "2024-07-01T03:52:55Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2vdDAC2MldXYSfRshK58aM",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "qix1mezffbig"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "createdAt": "2024-07-01T03:52:55Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2iaykW3Q9oNZxGJhkgJ3sJ"
+          }
+        },
+        "updatedAt": "2024-07-01T03:52:55Z"
+      }
+    }
+  ]
+}

@@ -1,11 +1,8 @@
-export type { TypeBlog, TypeBlogFields, BlogEntry } from "./TypeBlog";
+export type { BlogEntry } from "./TypeBlog";
+export type { ExperienceEntry } from "./TypeExperiences";
 export type {
-  TypeExperiences,
-  TypeExperiencesFields,
-  ExperienceEntry,
-} from "./TypeExperiences";
-export type {
-  TypeProjects,
-  TypeProjectsFields,
-  ProjectEntry,
-} from "./TypeProjects";
+  TypePersonalDetails,
+  TypePersonalDetailsFields,
+} from "./TypePersonalDetails";
+export type { ProjectEntry } from "./TypeProjects";
+export type { TechStackEntry } from "./TypeTechStack";
